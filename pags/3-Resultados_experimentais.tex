@@ -87,10 +87,10 @@ u=\sqrt{0{,}0072^2+0{,}024^2}=0{,}025\un{rad/s},
 \end{gather*}
 o que corresponde a uma redução de $2{,}3\%$ da frequência. Como a diferença é cerca de quatro vezes maior que sua incerteza, as frequências são significativamente diferentes, e o sentido da diferença ($\omega_1<\omega_0$) é o previsto pela Equação~\eqref{eq:w1}. Pela Equação~\eqref{eq:gw},
 \begin{gather*}
-\gamma=\sqrt{\omega_0^2-\omega_1^2}=\sqrt{20{,}182-19{,}252}=0{,}965\un{s^{-1}},\\
-u(\gamma)=\frac{\sqrt{(4{,}4925\cdot0{,}0072)^2+(4{,}3877\cdot0{,}024)^2}}{0{,}965}=0{,}12\un{s^{-1}},
+\gamma=\sqrt{\omega_0^2-\omega_1^2}=\sqrt{20{,}182-19{,}252}=0{,}965\un{rad/s},\\
+u(\gamma)=\frac{\sqrt{(4{,}4925\cdot0{,}0072)^2+(4{,}3877\cdot0{,}024)^2}}{0{,}965}=0{,}12\un{rad/s},
 \end{gather*}
-isto é, $\gamma_\omega=(0{,}96\pm0{,}12)\un{s^{-1}}$. Esse valor é comparado com o obtido do decaimento das amplitudes na próxima seção.
+isto é, $\gamma_\omega=(0{,}96\pm0{,}12)\un{rad/s}$. Esse valor é comparado com o obtido do decaimento das amplitudes na próxima seção.
 
 \subsection{Decaimento da amplitude na água}
 
@@ -136,9 +136,9 @@ A Figura~\ref{fig:decaimento} mostra o gráfico mono-log de $|x_n/x_0|$ em funç
 };
 \addlegendentry{dados}
 \addplot[domain=0:4.5, samples=50, thick] {exp(-0.1303-0.3676*x)};
-\addlegendentry{ajuste livre: $\gamma=0{,}368\un{s^{-1}}$}
+\addlegendentry{ajuste livre: $\gamma=0{,}368\un{rad/s}$}
 \addplot[domain=0:4.5, samples=50, thick, dashed] {exp(-0.4096*x)};
-\addlegendentry{ajuste pela origem: $\gamma=0{,}410\un{s^{-1}}$}
+\addlegendentry{ajuste pela origem: $\gamma=0{,}410\un{rad/s}$}
 \end{axis}
 \end{tikzpicture}
 \fonte{Elaborada pelos autores.}
@@ -146,23 +146,23 @@ A Figura~\ref{fig:decaimento} mostra o gráfico mono-log de $|x_n/x_0|$ em funç
 
 Aplicando o método dos mínimos quadrados (Seção~\ref{sec:mmq}) aos $N=7$ pontos $(t_n,\ln|x_n/x_0|)$, com $\bar{t}=2{,}148\un{s}$, $\bar{y}=-0{,}920$ e $S_{tt}=14{,}354\un{s^2}$, obteve-se
 \begin{gather*}
-\beta=-0{,}368\un{s^{-1}},\\
+\beta=-0{,}368\un{rad/s},\\
 a=-0{,}920-(-0{,}368)(2{,}148)=-0{,}130,\\
 s_r=0{,}096,
 \end{gather*}
 \begin{gather*}
-u(\beta)=\frac{0{,}096}{\sqrt{14{,}354}}=0{,}025\un{s^{-1}},\\
+u(\beta)=\frac{0{,}096}{\sqrt{14{,}354}}=0{,}025\un{rad/s},\\
 u(a)=0{,}096\sqrt{\frac{1}{7}+\frac{2{,}148^2}{14{,}354}}=0{,}065,\\
 r=-0{,}988.
 \end{gather*}
-Logo, $\gamma=-\beta=(0{,}368\pm0{,}025)\un{s^{-1}}$ e $a=-0{,}13\pm0{,}07$, valor de $a$ que difere de zero por cerca de duas incertezas, refletindo a curvatura citada. Impondo que a reta passe pela origem, com $\sum t_n^2=46{,}652\un{s^2}$ e $\sum t_ny_n=-19{,}109\un{s}$,
+Logo, $\gamma=-\beta=(0{,}368\pm0{,}025)\un{rad/s}$ e $a=-0{,}13\pm0{,}07$, valor de $a$ que difere de zero por cerca de duas incertezas, refletindo a curvatura citada. Impondo que a reta passe pela origem, com $\sum t_n^2=46{,}652\un{s^2}$ e $\sum t_ny_n=-19{,}109\un{s}$,
 \begin{gather*}
-\gamma=\frac{19{,}109}{46{,}652}=0{,}410\un{s^{-1}},\\
-u(\gamma)=\frac{s_r}{\sqrt{46{,}652}}=0{,}017\un{s^{-1}}.
+\gamma=\frac{19{,}109}{46{,}652}=0{,}410\un{rad/s},\\
+u(\gamma)=\frac{s_r}{\sqrt{46{,}652}}=0{,}017\un{rad/s}.
 \end{gather*}
-Como a diferença entre os dois ajustes ($0{,}042\un{s^{-1}}$) é maior que as incertezas estatísticas, ela foi adotada como incerteza, resultando em
+Como a diferença entre os dois ajustes ($0{,}042\un{rad/s}$) é maior que as incertezas estatísticas, ela foi adotada como incerteza, resultando em
 \[
-\gamma=(0{,}37\pm0{,}04)\un{s^{-1}}.
+\gamma=(0{,}37\pm0{,}04)\un{rad/s}.
 \]
 O coeficiente de atrito viscoso correspondente é
 \begin{gather*}
@@ -171,12 +171,14 @@ b=2m\gamma=2\left(10{,}837\times10^{-3}\right)(0{,}37)=8{,}0\times10^{-3}\un{kg/
 \end{gather*}
 ou seja, $b=(8{,}0\pm0{,}9)\times10^{-3}\un{kg/s}$.
 
+O decaimento das amplitudes mostra também que a energia mecânica do oscilador não se conserva. Nos pontos extremos a velocidade é nula e a energia é apenas potencial elástica, $E_n=\frac{1}{2}k\,x_n^2=\frac{1}{2}k\,x_0^2e^{-2\gamma t_n}$, de modo que a energia decai exponencialmente com taxa $2\gamma$, sendo dissipada pelo atrito viscoso. Ao final de $3T_1$, por exemplo, $(x_6/x_0)^2=(0{,}200)^2=0{,}04$, isto é, restavam apenas $4\%$ da energia inicial.
+
 Para verificar a consistência com a Equação~\eqref{eq:w1}, calculou-se o valor previsto de $\omega_1$ com o $\gamma$ obtido do decaimento:
 \begin{gather*}
 \omega_1^{prev}=\sqrt{(4{,}4925)^2-(0{,}37)^2}=4{,}477\un{rad/s},\\
 u=\frac{\sqrt{(4{,}4925\cdot0{,}0072)^2+(0{,}37\cdot0{,}04)^2}}{4{,}477}=0{,}008\un{rad/s},
 \end{gather*}
-contra o valor medido $\omega_1=(4{,}388\pm0{,}024)\un{rad/s}$. A diferença, $(0{,}089\pm0{,}025)\un{rad/s}$ (cerca de $2\%$), é aproximadamente 3,5 vezes a sua incerteza, de modo que os resultados não são estritamente consistentes com o modelo. De forma equivalente, $\gamma_\omega=(0{,}96\pm0{,}12)\un{s^{-1}}$ é cerca de 2,6 vezes maior que o valor obtido do decaimento.
+contra o valor medido $\omega_1=(4{,}388\pm0{,}024)\un{rad/s}$. A diferença, $(0{,}089\pm0{,}025)\un{rad/s}$ (cerca de $2\%$), é aproximadamente 3,5 vezes a sua incerteza, de modo que os resultados não são estritamente consistentes com o modelo. De forma equivalente, $\gamma_\omega=(0{,}96\pm0{,}12)\un{rad/s}$ é cerca de 2,6 vezes maior que o valor obtido do decaimento.
 
 Algumas causas plausíveis para a discrepância são:
 \begin{enumerate}
@@ -239,7 +241,7 @@ u(\Omega_R^{ar})=4{,}520\cdot\frac{0{,}010}{9{,}73}=0{,}005\un{rad/s},
 \end{gather*}
 isto é, $\Omega_R^{ar}=(4{,}520\pm0{,}005)\un{rad/s}$. A Figura~\ref{fig:forcada_ar} mostra o comportamento esperado: a amplitude cresce à medida que $\Omega$ se aproxima de $\Omega_R$ e decai rapidamente acima dela.
 
-Comparando com a frequência do oscilador livre, $\omega_0=(4{,}492\pm0{,}007)\un{rad/s}$, a diferença é de $0{,}028\un{rad/s}$ ($0{,}6\%$), valores muito próximos, como esperado para um meio de baixa viscosidade, em que a Equação~\eqref{eq:Wr} fornece $\Omega_r\approx\omega_0$. Estritamente, a Equação~\eqref{eq:Wr} prevê $\Omega_r\le\omega_0$, enquanto o resultado experimental ficou ligeiramente acima, por cerca de três vezes a incerteza combinada ($0{,}009\un{rad/s}$). Essa incerteza, porém, considera apenas a dispersão de duas medidas de $t_7$ e não inclui o tempo de reação do operador ao iniciar e parar o cronômetro (tipicamente $0{,}1$ a $0{,}2\un{s}$, isto é, $1\%$ a $2\%$ de $t_7$), nem a dificuldade de identificar visualmente a rotação exata em que a amplitude é máxima. Considerando essas fontes, o resultado é coerente com o modelo. Mesmo que o amortecimento no ar fosse tão grande quanto o medido na água ($\gamma=0{,}37\un{s^{-1}}$), a Equação~\eqref{eq:Wr} preveria $\Omega_r=4{,}462\un{rad/s}$, uma redução de apenas $0{,}7\%$, indistinguível com a precisão disponível.
+Comparando com a frequência do oscilador livre, $\omega_0=(4{,}492\pm0{,}007)\un{rad/s}$, a diferença é de $0{,}028\un{rad/s}$ ($0{,}6\%$), valores muito próximos, como esperado para um meio de baixa viscosidade, em que a Equação~\eqref{eq:Wr} fornece $\Omega_r\approx\omega_0$. Estritamente, a Equação~\eqref{eq:Wr} prevê $\Omega_r\le\omega_0$, enquanto o resultado experimental ficou ligeiramente acima, por cerca de três vezes a incerteza combinada ($0{,}009\un{rad/s}$). Essa incerteza, porém, considera apenas a dispersão de duas medidas de $t_7$ e não inclui o tempo de reação do operador ao iniciar e parar o cronômetro (tipicamente $0{,}1$ a $0{,}2\un{s}$, isto é, $1\%$ a $2\%$ de $t_7$), nem a dificuldade de identificar visualmente a rotação exata em que a amplitude é máxima. Considerando essas fontes, o resultado é coerente com o modelo. Mesmo que o amortecimento no ar fosse tão grande quanto o medido na água ($\gamma=0{,}37\un{rad/s}$), a Equação~\eqref{eq:Wr} preveria $\Omega_r=4{,}462\un{rad/s}$, uma redução de apenas $0{,}7\%$, indistinguível com a precisão disponível.
 
 \subsection{Oscilação forçada na água}
 
@@ -272,7 +274,7 @@ u(\Omega_R^{ag})=4{,}211\cdot\frac{0{,}075}{10{,}445}=0{,}030\un{rad/s},
 \end{gather*}
 isto é, $\Omega_R^{ag}=(4{,}21\pm0{,}03)\un{rad/s}$.
 
-Para auxiliar a interpretação, os pontos foram ajustados pela Equação~\eqref{eq:x0W}, com $A=F_0/m$, $\omega_0$ e $\gamma$ como parâmetros livres (7 pontos e 3 parâmetros), conforme a Seção~\ref{sec:mmq}. O ajuste resultou em $A=(125\pm6)\un{cm\,rad^2/s^2}$, $\omega_0^{aj}=(4{,}41\pm0{,}03)\un{rad/s}$ e $\gamma^{aj}=(0{,}61\pm0{,}04)\un{s^{-1}}$, aos quais, pela Equação~\eqref{eq:Wr}, corresponde
+Para auxiliar a interpretação, os pontos foram ajustados pela Equação~\eqref{eq:x0W}, com $A=F_0/m$, $\omega_0$ e $\gamma$ como parâmetros livres (7 pontos e 3 parâmetros), conforme a Seção~\ref{sec:mmq}. O ajuste resultou em $A=(125\pm6)\un{cm\,rad^2/s^2}$, $\omega_0^{aj}=(4{,}41\pm0{,}03)\un{rad/s}$ e $\gamma^{aj}=(0{,}61\pm0{,}04)\un{rad/s}$, aos quais, pela Equação~\eqref{eq:Wr}, corresponde
 \[
 \Omega_r^{aj}=\sqrt{(4{,}412)^2-2(0{,}606)^2}=4{,}33\un{rad/s}.
 \]
@@ -342,7 +344,7 @@ A consistência quantitativa com a Equação~\eqref{eq:Wr} depende do valor de $
 \label{tab:comparacao}
 \begin{tabular}{lccc}
 \toprule
-Origem de $\gamma$ & $\gamma$ ($\mathrm{s^{-1}}$) & $\omega_0$ utilizado (rad/s) & $\Omega_r$ prevista (rad/s) \\
+Origem de $\gamma$ & $\gamma$ (rad/s) & $\omega_0$ utilizado (rad/s) & $\Omega_r$ prevista (rad/s) \\
 \midrule
 Decaimento da amplitude & 0,37 & 4,492 (ar) & 4,462 \\
 Ajuste da curva de ressonância & 0,61 & 4,41 (ajuste) & 4,328 \\
@@ -354,4 +356,4 @@ Valor experimental & --- & --- & $4{,}21\pm0{,}03$ \\
 \fonte{Elaborada pelos autores.}
 \end{table}
 
-Todas as previsões indicam diminuição de $\Omega_r$ em relação a $\omega_0$, mas ficam acima do valor experimental. O deslocamento observado ($6{,}3\%$ abaixo de $\omega_0$) é bem maior que o previsto com $\gamma=0{,}37\un{s^{-1}}$ ($0{,}7\%$) e mais próximo das previsões com os valores maiores de $\gamma$. As três estimativas de $\gamma$ ($0{,}37$; $0{,}61$ e $0{,}96\un{s^{-1}}$) não são compatíveis entre si dentro das incertezas, o que indica que o modelo de atrito viscoso linear, com $\omega_0$ igual ao do ar, descreve o sistema na água apenas de modo aproximado. Um indício disso é que a frequência natural obtida no ajuste da curva de ressonância, $(4{,}41\pm0{,}03)\un{rad/s}$, é menor que a medida no ar e próxima de $\omega_1=4{,}388\un{rad/s}$, o que é compatível com o aumento da massa efetiva devido ao fluido arrastado pelo corpo. Além disso, a ressonância foi identificada por inspeção visual do máximo de amplitude, com poucos pontos próximos ao pico, o que limita a precisão de $\Omega_R$.
+Todas as previsões indicam diminuição de $\Omega_r$ em relação a $\omega_0$, mas ficam acima do valor experimental. O deslocamento observado ($6{,}3\%$ abaixo de $\omega_0$) é bem maior que o previsto com $\gamma=0{,}37\un{rad/s}$ ($0{,}7\%$) e mais próximo das previsões com os valores maiores de $\gamma$. As três estimativas de $\gamma$ ($0{,}37$; $0{,}61$ e $0{,}96\un{rad/s}$) não são compatíveis entre si dentro das incertezas, o que indica que o modelo de atrito viscoso linear, com $\omega_0$ igual ao do ar, descreve o sistema na água apenas de modo aproximado. Um indício disso é que a frequência natural obtida no ajuste da curva de ressonância, $(4{,}41\pm0{,}03)\un{rad/s}$, é menor que a medida no ar e próxima de $\omega_1=4{,}388\un{rad/s}$, o que é compatível com o aumento da massa efetiva devido ao fluido arrastado pelo corpo. Além disso, a ressonância foi identificada por inspeção visual do máximo de amplitude, com poucos pontos próximos ao pico, o que limita a precisão de $\Omega_R$: a apostila recomenda ao menos dez valores de $\Omega$, com pontos adicionais nas regiões de grande variação de amplitude, enquanto foram medidos sete em cada meio.
