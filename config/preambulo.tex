@@ -24,17 +24,6 @@
 }
 
 % ---------------------------------------------------------------
-% Títulos das seções (ABNT NBR 6024)
-% ---------------------------------------------------------------
-\usepackage{titlesec}
-\titleformat{\section}{\normalsize\bfseries}{\thesection}{0.5em}{\MakeUppercase}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
-\titleformat{\subsubsection}{\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}
-\titlespacing*{\section}{0pt}{12pt}{12pt}
-\titlespacing*{\subsection}{0pt}{12pt}{6pt}
-\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
-
-% ---------------------------------------------------------------
 % Numeração de páginas no canto superior direito (ABNT NBR 14724)
 % ---------------------------------------------------------------
 \usepackage{fancyhdr}
@@ -59,6 +48,8 @@
 }
 % unidade em texto reto, com espaço fino: $10\un{s}$
 \newcommand{\un}[1]{\,\mathrm{#1}}
+% citação numérica (ABNT NBR 10520, sistema numérico)
+\newcommand{\cita}[1]{\textsuperscript{[#1]}}
 
 % ---------------------------------------------------------------
 % Figuras, tabelas e legendas (título acima, fonte abaixo)

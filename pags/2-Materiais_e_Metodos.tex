@@ -1,53 +1,56 @@
 \section{Materiais e Métodos}
 
-\subsection{Instrumentos e materiais}
+\subsection{Instrumentos e Materiais}
 
-Para a realização do experimento, foram utilizados os seguintes instrumentos e materiais:
+Para a realização do experimento, foram utilizados os seguintes instrumentos:
 \begin{itemize}
-    \item sistema massa-mola vertical montado em suporte, com régua graduada em centímetros para leitura das posições;
-    \item corpo de massa $m$ suspenso na extremidade da mola;
-    \item balança de precisão (resolução de $0{,}01\un{g}$);
-    \item cronômetro digital (resolução de $0{,}01\un{s}$);
-    \item proveta com água;
-    \item sistema de excitação composto por motor elétrico de rotação variável, disco girante e alavanca acoplada ao ponto de suspensão da mola.
+    \item Sistema massa-mola vertical montado em suporte, com régua graduada em centímetros para leitura das posições;
+    \item Corpo de massa $m$ suspenso na extremidade da mola;
+    \item Balança de precisão (resolução de $0{,}01\un{g}$);
+    \item Cronômetro digital (resolução de $0{,}01\un{s}$);
+    \item Proveta com água;
+    \item Sistema de excitação composto por motor elétrico de rotação variável, disco girante e alavanca acoplada ao ponto de suspensão da mola.
 \end{itemize}
 
-\subsection{Procedimento experimental}
+\subsection{Métodos}
 
-Para melhor compreensão do procedimento e da ordem cronológica das medidas, esta seção foi dividida em cinco experimentos:
-\begin{enumerate}
-    \item determinação do período e da frequência angular de oscilação do sistema no ar;
-    \item determinação do período e da frequência angular de oscilação do sistema na água;
-    \item análise do decaimento da amplitude da oscilação amortecida na água e determinação do fator de amortecimento;
-    \item estudo da oscilação forçada no ar e determinação da frequência de ressonância;
-    \item estudo da oscilação forçada na água e determinação da frequência de ressonância.
-\end{enumerate}
+Para uma melhor compreensão do procedimento experimental, além de melhorar a concepção cronológica das práticas, esta seção do relatório será dividida em cinco experimentos diferentes:
+\begin{itemize}
+    \item Determinação do período e da frequência angular de oscilação do sistema no ar (experimento 1);
+    \item Determinação do período e da frequência angular de oscilação do sistema na água (experimento 2);
+    \item Análise do decaimento da amplitude da oscilação amortecida na água e determinação do fator de amortecimento (experimento 3);
+    \item Estudo da oscilação forçada no ar e determinação da frequência de ressonância (experimento 4);
+    \item Estudo da oscilação forçada na água e determinação da frequência de ressonância (experimento 5).
+\end{itemize}
 
 Antes dos experimentos, a massa do corpo suspenso foi medida três vezes na balança.
 
-\subsubsection{Experimento 1: oscilação livre no ar}
+\subsubsection{Experimento 1}
 
 O sistema massa-mola foi posto para oscilar no ar, situação mais próxima de um oscilador livre. A massa foi deslocada para baixo da posição de equilíbrio e solta a partir do repouso, e o tempo de 10 oscilações completas foi medido com o cronômetro. Cronometrar 10 oscilações, em vez de uma única, reduz a incerteza relativa do período, já que o erro associado ao tempo de reação do operador é distribuído por 10 períodos. O procedimento foi repetido cinco vezes, e o período $T_0$ e a frequência angular $\omega_0$ foram obtidos conforme a Seção~\ref{sec:incertezas}.
 
-\subsubsection{Experimento 2: oscilação amortecida na água}
+\subsubsection{Experimento 2}
 
 O mesmo sistema foi posicionado de modo que o corpo ficasse dentro da proveta com água, tomando-se o cuidado para que permanecesse sempre submerso e não encostasse nas paredes da proveta. De modo análogo ao Experimento 1, mediu-se cinco vezes o tempo de 10 oscilações, obtendo-se o período $T_1$ e a frequência angular $\omega_1$, posteriormente comparada com $\omega_0$.
 
-\subsubsection{Experimento 3: decaimento da amplitude na água}
+\subsubsection{Experimento 3}
 
 Com o corpo ainda na água, a massa foi deslocada até uma amplitude inicial $x_0$ e solta a partir do repouso, sempre da mesma posição inicial. Registrou-se, na régua, a leitura $y_n$ da posição extrema da massa nos instantes $t_n=n\,T_1/2$ ($n=0,1,\dots,6$), isto é, de $t=0$ até $t=3T_1$, em que $T_1$ é o período obtido no Experimento 2. A posição de equilíbrio correspondeu à leitura $y_{eq}=70\un{cm}$, e a amplitude foi definida como $|x_n|=|y_n-y_{eq}|$. O procedimento foi realizado duas vezes. Com os dados, construiu-se o gráfico mono-log de $|x_n/x_0|$ em função de $t_n$ e determinou-se $\gamma$ por regressão linear (Seção~\ref{sec:mmq}).
 
-\subsubsection{Experimento 4: oscilação forçada no ar}
+\subsubsection{Experimento 4}
 
 Com o corpo oscilando no ar, ligou-se o motor que desloca periodicamente o ponto de suspensão da mola. Para diferentes rotações do motor, aguardou-se o término do regime transitório e mediu-se, na régua, a amplitude máxima $x_0$ de oscilação da massa. A frequência de excitação foi determinada cronometrando-se o tempo $t_7$ de 7 rotações do disco. Foram escolhidas frequências abaixo, acima e próximas da ressonância, e, na condição de ressonância, na qual a amplitude cresceu consideravelmente, o tempo de 7 rotações foi medido duas vezes.
 
-\subsubsection{Experimento 5: oscilação forçada na água}
+\subsubsection{Experimento 5}
 
 O procedimento do Experimento 4 foi repetido com o corpo oscilando dentro da proveta com água, medindo-se a amplitude máxima $x_0$ para diferentes valores de $\Omega$, inclusive na condição de ressonância, em que o tempo de 7 rotações foi cronometrado duas vezes. As curvas $x_0(\Omega)$ obtidas no ar e na água foram então comparadas.
 
-\subsection{Dedução das equações}
+\subsection{Dedução das Equações}
 
 \subsubsection{Oscilador harmônico vertical livre}
+
+As deduções a seguir seguem a apostila da disciplina\cita{1} e as referências\cita{2,3}.
+
 
 Na posição de equilíbrio, a mola está alongada de $\Delta$, de modo que a força elástica compensa o peso, $k\Delta=mg$. Tomando essa posição como origem ($x=0$) e o eixo $x$ orientado para baixo, um deslocamento $x$ da massa resulta na força $mg-k(\Delta+x)=-kx$. O peso, portanto, apenas desloca a posição de equilíbrio, e a segunda lei de Newton fornece
 \[
