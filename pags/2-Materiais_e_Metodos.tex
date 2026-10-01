@@ -1,0 +1,241 @@
+\section{Materiais e Métodos}
+
+\subsection{Instrumentos e materiais}
+
+Para a realização do experimento, foram utilizados os seguintes instrumentos e materiais:
+\begin{itemize}
+    \item sistema massa-mola vertical montado em suporte, com régua graduada em centímetros para leitura das posições;
+    \item corpo de massa $m$ suspenso na extremidade da mola;
+    \item balança de precisão (resolução de $0{,}01\un{g}$);
+    \item cronômetro digital (resolução de $0{,}01\un{s}$);
+    \item proveta com água;
+    \item sistema de excitação composto por motor elétrico de rotação variável, disco girante e alavanca acoplada ao ponto de suspensão da mola.
+\end{itemize}
+
+\subsection{Procedimento experimental}
+
+Para melhor compreensão do procedimento e da ordem cronológica das medidas, esta seção foi dividida em cinco experimentos:
+\begin{enumerate}
+    \item determinação do período e da frequência angular de oscilação do sistema no ar;
+    \item determinação do período e da frequência angular de oscilação do sistema na água;
+    \item análise do decaimento da amplitude da oscilação amortecida na água e determinação do fator de amortecimento;
+    \item estudo da oscilação forçada no ar e determinação da frequência de ressonância;
+    \item estudo da oscilação forçada na água e determinação da frequência de ressonância.
+\end{enumerate}
+
+Antes dos experimentos, a massa do corpo suspenso foi medida três vezes na balança.
+
+\subsubsection{Experimento 1: oscilação livre no ar}
+
+O sistema massa-mola foi posto para oscilar no ar, situação mais próxima de um oscilador livre. A massa foi deslocada para baixo da posição de equilíbrio e solta a partir do repouso, e o tempo de 10 oscilações completas foi medido com o cronômetro. Cronometrar 10 oscilações, em vez de uma única, reduz a incerteza relativa do período, já que o erro associado ao tempo de reação do operador é distribuído por 10 períodos. O procedimento foi repetido cinco vezes, e o período $T_0$ e a frequência angular $\omega_0$ foram obtidos conforme a Seção~\ref{sec:incertezas}.
+
+\subsubsection{Experimento 2: oscilação amortecida na água}
+
+O mesmo sistema foi posicionado de modo que o corpo ficasse dentro da proveta com água, tomando-se o cuidado para que permanecesse sempre submerso e não encostasse nas paredes da proveta. De modo análogo ao Experimento 1, mediu-se cinco vezes o tempo de 10 oscilações, obtendo-se o período $T_1$ e a frequência angular $\omega_1$, posteriormente comparada com $\omega_0$.
+
+\subsubsection{Experimento 3: decaimento da amplitude na água}
+
+Com o corpo ainda na água, a massa foi deslocada até uma amplitude inicial $x_0$ e solta a partir do repouso, sempre da mesma posição inicial. Registrou-se, na régua, a leitura $y_n$ da posição extrema da massa nos instantes $t_n=n\,T_1/2$ ($n=0,1,\dots,6$), isto é, de $t=0$ até $t=3T_1$, em que $T_1$ é o período obtido no Experimento 2. A posição de equilíbrio correspondeu à leitura $y_{eq}=70\un{cm}$, e a amplitude foi definida como $|x_n|=|y_n-y_{eq}|$. O procedimento foi realizado duas vezes. Com os dados, construiu-se o gráfico mono-log de $|x_n/x_0|$ em função de $t_n$ e determinou-se $\gamma$ por regressão linear (Seção~\ref{sec:mmq}).
+
+\subsubsection{Experimento 4: oscilação forçada no ar}
+
+Com o corpo oscilando no ar, ligou-se o motor que desloca periodicamente o ponto de suspensão da mola. Para diferentes rotações do motor, aguardou-se o término do regime transitório e mediu-se, na régua, a amplitude máxima $x_0$ de oscilação da massa. A frequência de excitação foi determinada cronometrando-se o tempo $t_7$ de 7 rotações do disco. Foram escolhidas frequências abaixo, acima e próximas da ressonância, e, na condição de ressonância, na qual a amplitude cresceu consideravelmente, o tempo de 7 rotações foi medido duas vezes.
+
+\subsubsection{Experimento 5: oscilação forçada na água}
+
+O procedimento do Experimento 4 foi repetido com o corpo oscilando dentro da proveta com água, medindo-se a amplitude máxima $x_0$ para diferentes valores de $\Omega$, inclusive na condição de ressonância, em que o tempo de 7 rotações foi cronometrado duas vezes. As curvas $x_0(\Omega)$ obtidas no ar e na água foram então comparadas.
+
+\subsection{Dedução das equações}
+
+\subsubsection{Oscilador harmônico vertical livre}
+
+Na posição de equilíbrio, a mola está alongada de $\Delta$, de modo que a força elástica compensa o peso, $k\Delta=mg$. Tomando essa posição como origem ($x=0$) e o eixo $x$ orientado para baixo, um deslocamento $x$ da massa resulta na força $mg-k(\Delta+x)=-kx$. O peso, portanto, apenas desloca a posição de equilíbrio, e a segunda lei de Newton fornece
+\[
+m\frac{d^2x}{dt^2}=-kx
+\quad\Longrightarrow\quad
+\frac{d^2x}{dt^2}+\omega_0^2\,x=0,
+\]
+em que
+\begin{equation}
+\omega_0=\sqrt{\frac{k}{m}}
+\label{eq:w0}
+\end{equation}
+é a frequência angular natural do sistema. A solução geral é $x(t)=A\cos(\omega_0 t)+B\sin(\omega_0 t)$. Para a massa solta do repouso em $x=x_0$, isto é, $x(0)=x_0$ e $\dot{x}(0)=0$, obtém-se $A=x_0$ e $B=0$, logo
+\[
+x(t)=x_0\cos(\omega_0 t).
+\]
+O movimento se repete após um período $T$ tal que $\omega_0T=2\pi$. Assim, a frequência angular é obtida do período medido por
+\begin{equation}
+\omega=\frac{2\pi}{T},
+\label{eq:wT}
+\end{equation}
+e, isolando $k$ na Equação~\eqref{eq:w0}, a constante elástica da mola é
+\begin{equation}
+k=m\,\omega_0^2.
+\label{eq:k}
+\end{equation}
+A amplitude $x_0$ é constante e determinada apenas pela condição inicial.
+
+\subsubsection{Oscilador harmônico vertical amortecido}
+
+Em um meio viscoso, para baixas velocidades, acrescenta-se uma força de atrito proporcional à velocidade e de sentido oposto a ela, $F_a=-b\,\dot{x}$, em que $b$ é o coeficiente de atrito viscoso. A segunda lei de Newton resulta em
+\[
+m\ddot{x}=-kx-b\dot{x}
+\quad\Longrightarrow\quad
+\ddot{x}+2\gamma\dot{x}+\omega_0^2x=0,
+\qquad
+\gamma=\frac{b}{2m},
+\]
+em que $\gamma$ é o fator de amortecimento, com unidade $\mathrm{s^{-1}}$. Procurando soluções da forma $x=e^{\lambda t}$, obtém-se a equação característica $\lambda^2+2\gamma\lambda+\omega_0^2=0$, cujas raízes são
+\[
+\lambda=-\gamma\pm\sqrt{\gamma^2-\omega_0^2}.
+\]
+Para amortecimento fraco ($\gamma<\omega_0$), a raiz quadrada é imaginária e $\lambda=-\gamma\pm i\,\omega_1$, com
+\begin{equation}
+\omega_1=\sqrt{\omega_0^2-\gamma^2}.
+\label{eq:w1}
+\end{equation}
+A solução real é então $x(t)=e^{-\gamma t}\left[C_1\cos(\omega_1 t)+C_2\sin(\omega_1 t)\right]$. Impondo $x(0)=x_0$ e $\dot{x}(0)=0$, obtém-se $C_1=x_0$ e $-\gamma C_1+\omega_1C_2=0$, isto é, $C_2=x_0\gamma/\omega_1$, de modo que
+\begin{equation}
+x(t)=x_0\,e^{-\gamma t}\left[\cos(\omega_1 t)+\frac{\gamma}{\omega_1}\sin(\omega_1 t)\right].
+\label{eq:xamort}
+\end{equation}
+Derivando a Equação~\eqref{eq:xamort}, os termos em cosseno se cancelam e resta
+\[
+\dot{x}(t)=-x_0\,\frac{\omega_0^2}{\omega_1}\,e^{-\gamma t}\sin(\omega_1 t),
+\]
+que se anula exatamente em $t_n=n\pi/\omega_1=n\,T_1/2$, sendo $T_1=2\pi/\omega_1$ o período da oscilação amortecida. Nesses instantes $\sin(\omega_1t_n)=0$ e $\cos(\omega_1t_n)=(-1)^n$, logo as posições extremas são $x(t_n)=(-1)^n x_0e^{-\gamma t_n}$, e suas amplitudes satisfazem
+\[
+|x_n|=x_0\,e^{-\gamma t_n}
+\quad\Longrightarrow\quad
+\ln\left|\frac{x_n}{x_0}\right|=-\gamma\,t_n.
+\]
+Em um gráfico mono-log de $|x_n/x_0|$ em função de $t_n$, os pontos devem, portanto, alinhar-se em uma reta que passa pela origem e cujo coeficiente angular é $-\gamma$. Esse resultado justifica a leitura das amplitudes a cada meio período no Experimento 3. Conhecido $\gamma$, o coeficiente de atrito viscoso é $b=2m\gamma$.
+
+Alternativamente, isolando $\gamma$ na Equação~\eqref{eq:w1}, o fator de amortecimento pode ser estimado pelas frequências medidas no ar e na água:
+\begin{equation}
+\gamma=\sqrt{\omega_0^2-\omega_1^2}.
+\label{eq:gw}
+\end{equation}
+A Equação~\eqref{eq:w1} mostra ainda que $\omega_1<\omega_0$ e que só há oscilação para $\gamma<\omega_0$. Em $\gamma=\omega_0$ (amortecimento crítico) as raízes coincidem e o sistema retorna ao equilíbrio sem oscilar; para $\gamma>\omega_0$ (amortecimento supercrítico), ambas as raízes são reais e negativas, e o retorno ao equilíbrio, também sem oscilação, é mais lento que no caso crítico.
+
+\subsubsection{Oscilador harmônico vertical forçado}
+
+Considera-se agora uma força externa harmônica $F_{ext}=F_0\cos(\Omega t)$, em que $\Omega$ é a frequência angular imposta pelo agente externo (no experimento, a rotação do motor) e $F_0$ é sua amplitude. A segunda lei de Newton fornece
+\[
+\ddot{x}+2\gamma\dot{x}+\omega_0^2x=\frac{F_0}{m}\cos(\Omega t).
+\]
+A solução geral é a soma da solução da equação homogênea, Equação~\eqref{eq:xamort}, que decai como $e^{-\gamma t}$ (regime transitório), com uma solução particular. Após o transitório, permanece apenas a solução particular, na qual o sistema oscila com a frequência imposta:
+\[
+x(t)=x_0(\Omega)\cos(\Omega t+\delta).
+\]
+Para determinar $x_0(\Omega)$, escreve-se $x(t)=\mathrm{Re}\left[X e^{i\Omega t}\right]$, com $X=x_0e^{i\delta}$, e $F_0\cos(\Omega t)=\mathrm{Re}\left[F_0e^{i\Omega t}\right]$. Substituindo na equação diferencial,
+\[
+\left(\omega_0^2-\Omega^2+2i\gamma\Omega\right)X=\frac{F_0}{m},
+\]
+cujo módulo fornece a amplitude
+\begin{equation}
+x_0(\Omega)=|X|=\frac{F_0/m}{\sqrt{\left(\omega_0^2-\Omega^2\right)^2+4\gamma^2\Omega^2}},
+\label{eq:x0W}
+\end{equation}
+enquanto a fase $\delta=-\arctan\left[2\gamma\Omega/(\omega_0^2-\Omega^2)\right]$ não é estudada nesta prática. A amplitude independe do tempo e depende da frequência da força externa. O máximo de $x_0(\Omega)$ ocorre quando o radicando $D(\Omega)=\left(\omega_0^2-\Omega^2\right)^2+4\gamma^2\Omega^2$ é mínimo:
+\[
+\frac{dD}{d\Omega}=-4\Omega\left(\omega_0^2-\Omega^2\right)+8\gamma^2\Omega
+=4\Omega\left(\Omega^2-\omega_0^2+2\gamma^2\right)=0,
+\]
+cuja solução não trivial é a frequência de ressonância
+\begin{equation}
+\Omega_r=\sqrt{\omega_0^2-2\gamma^2},
+\label{eq:Wr}
+\end{equation}
+que existe para $\gamma<\omega_0/\sqrt{2}$. Substituindo $\Omega_r$ em $D$, tem-se $D(\Omega_r)=4\gamma^4+4\gamma^2(\omega_0^2-2\gamma^2)=4\gamma^2(\omega_0^2-\gamma^2)=4\gamma^2\omega_1^2$, e a amplitude máxima é
+\begin{equation}
+x_0^{max}=\frac{F_0/m}{2\gamma\,\omega_1}.
+\label{eq:x0max}
+\end{equation}
+Para $\gamma\to0$, $\Omega_r\to\omega_0$ e $x_0^{max}\to\infty$. Como na prática $\gamma\neq0$, a amplitude permanece finita: quanto maior o amortecimento, menor a amplitude máxima, mais larga a curva $x_0(\Omega)$ e mais deslocada para baixo de $\omega_0$ fica a ressonância.
+
+No experimento, a frequência angular de excitação é obtida a partir do tempo $t_7$ de 7 rotações do disco, cada uma correspondendo a um ângulo de $2\pi$:
+\begin{equation}
+\Omega=\frac{2\pi\cdot 7}{t_7}.
+\label{eq:W}
+\end{equation}
+
+\subsubsection{Tratamento estatístico e propagação de incertezas}
+\label{sec:incertezas}
+
+Para $N$ medidas $q_1,\dots,q_N$ de uma mesma grandeza, adota-se como melhor estimativa a média $\bar{q}=\frac{1}{N}\sum q_i$, e a dispersão é caracterizada pelo desvio-padrão amostral
+\[
+s_q=\sqrt{\frac{1}{N-1}\sum_{i=1}^{N}\left(q_i-\bar{q}\right)^2}.
+\]
+Se uma grandeza $f(q_1,\dots,q_M)$ é calculada a partir de grandezas independentes com incertezas $u(q_j)$, a expansão em primeira ordem $\delta f\approx\sum_j(\partial f/\partial q_j)\,\delta q_j$ fornece, elevando ao quadrado e tomando a média (os termos cruzados se anulam pela independência),
+\begin{equation}
+u(f)=\sqrt{\sum_{j=1}^{M}\left(\frac{\partial f}{\partial q_j}\right)^2u^2(q_j)}.
+\label{eq:prop}
+\end{equation}
+Aplicando a Equação~\eqref{eq:prop} à média, em que $\partial\bar{q}/\partial q_i=1/N$ e $u(q_i)=s_q$, obtém-se o desvio-padrão da média, adotado como incerteza das grandezas medidas repetidamente:
+\[
+u(\bar{q})=\sqrt{N\,\frac{s_q^2}{N^2}}=\frac{s_q}{\sqrt{N}}.
+\]
+Aplicando a mesma equação às demais relações utilizadas, obtém-se:
+\begin{itemize}
+    \item frequência angular (Equação~\ref{eq:wT}): como $\partial\omega/\partial T=-2\pi/T^2$,
+    \[
+    u(\omega)=\frac{2\pi}{T^2}\,u(T)=\omega\,\frac{u(T)}{T};
+    \]
+    \item frequência de excitação (Equação~\ref{eq:W}): analogamente,
+    \[
+    u(\Omega)=\Omega\,\frac{u(t_7)}{t_7};
+    \]
+    \item constante elástica (Equação~\ref{eq:k}): como $\partial k/\partial m=\omega_0^2$ e $\partial k/\partial\omega_0=2m\omega_0$,
+    \[
+    \frac{u(k)}{k}=\sqrt{\left(\frac{u(m)}{m}\right)^2+\left(\frac{2\,u(\omega_0)}{\omega_0}\right)^2};
+    \]
+    \item fator de amortecimento (Equação~\ref{eq:gw}): como $\partial\gamma/\partial\omega_0=\omega_0/\gamma$ e $\partial\gamma/\partial\omega_1=-\omega_1/\gamma$,
+    \[
+    u(\gamma)=\frac{\sqrt{\left[\omega_0u(\omega_0)\right]^2+\left[\omega_1u(\omega_1)\right]^2}}{\gamma};
+    \]
+    \item frequência amortecida prevista (Equação~\ref{eq:w1}): analogamente,
+    \[
+    u(\omega_1)=\frac{\sqrt{\left[\omega_0u(\omega_0)\right]^2+\left[\gamma\,u(\gamma)\right]^2}}{\omega_1};
+    \]
+    \item coeficiente de atrito ($b=2m\gamma$):
+    \[
+    \frac{u(b)}{b}=\sqrt{\left(\frac{u(m)}{m}\right)^2+\left(\frac{u(\gamma)}{\gamma}\right)^2};
+    \]
+    \item diferença entre duas grandezas ($d=q_1-q_2$):
+    \[
+    u(d)=\sqrt{u^2(q_1)+u^2(q_2)}.
+    \]
+\end{itemize}
+
+\subsubsection{Método dos mínimos quadrados}
+\label{sec:mmq}
+
+Para ajustar uma reta $y=a+\beta t$ a $N$ pontos $(t_i,y_i)$, com $y_i=\ln|x_i/x_0|$ e $\beta=-\gamma$, minimiza-se a soma dos quadrados dos resíduos $S=\sum_i\left(y_i-a-\beta t_i\right)^2$. As condições $\partial S/\partial a=0$ e $\partial S/\partial\beta=0$ resultam em $\sum y_i=Na+\beta\sum t_i$ e $\sum t_iy_i=a\sum t_i+\beta\sum t_i^2$, cuja solução é
+\[
+\beta=\frac{\sum_i\left(t_i-\bar{t}\right)\left(y_i-\bar{y}\right)}{S_{tt}},
+\qquad
+a=\bar{y}-\beta\,\bar{t},
+\qquad
+S_{tt}=\sum_i\left(t_i-\bar{t}\right)^2.
+\]
+Como $\beta=\sum_i c_iy_i$, com $c_i=(t_i-\bar{t})/S_{tt}$, a Equação~\eqref{eq:prop} fornece $u^2(\beta)=s_r^2\sum_ic_i^2$, ou seja,
+\[
+u(\beta)=\frac{s_r}{\sqrt{S_{tt}}},
+\qquad
+u(a)=s_r\sqrt{\frac{1}{N}+\frac{\bar{t}^2}{S_{tt}}},
+\qquad
+s_r=\sqrt{\frac{\sum_i\left(y_i-a-\beta t_i\right)^2}{N-2}},
+\]
+em que $s_r$ estima a dispersão dos pontos em torno da reta ($N-2$ graus de liberdade, pois dois parâmetros foram ajustados). A qualidade do alinhamento é avaliada pelo coeficiente de correlação $r=\sum_i(t_i-\bar{t})(y_i-\bar{y})\big/\sqrt{S_{tt}\sum_i(y_i-\bar{y})^2}$.
+
+Como a normalização impõe $y_0=\ln 1=0$ em $t=0$, também se ajustou a reta $y=-\gamma t$ passando pela origem. Nesse caso, $dS/d\gamma=2\sum_it_i\left(y_i+\gamma t_i\right)=0$, de onde
+\[
+\gamma=-\frac{\sum_it_iy_i}{\sum_it_i^2},
+\qquad
+u(\gamma)=\frac{s_r}{\sqrt{\sum_it_i^2}},
+\]
+com $s_r$ calculado com $N-1$ graus de liberdade.
+
+Para a curva de ressonância na água, os parâmetros $F_0/m$, $\omega_0$ e $\gamma$ da Equação~\eqref{eq:x0W} foram obtidos pela minimização numérica de $S=\sum_i\left[x_{0,i}-x_0(\Omega_i)\right]^2$ (mínimos quadrados não lineares), com incertezas dadas pela raiz dos elementos diagonais da matriz de covariância do ajuste.
