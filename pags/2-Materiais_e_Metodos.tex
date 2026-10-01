@@ -71,11 +71,12 @@ m\frac{d^2x}{dt^2}=-kx-b\frac{dx}{dt}
 \qquad
 \gamma=\frac{b}{2m},
 \]
-em que $\gamma$ é o fator de amortecimento. Procurando soluções da forma $x=e^{\lambda t}$, tem-se $\dfrac{dx}{dt}=\lambda x$ e $\dfrac{d^2x}{dt^2}=\lambda^2x$, e a equação se reduz a $\lambda^2+2\gamma\lambda+\omega_0^2=0$, cujas raízes são
-\[
-\lambda=-\gamma\pm\sqrt{\gamma^2-\omega_0^2}.
-\]
-Para amortecimento fraco ($\gamma<\omega_0$), a raiz quadrada é imaginária e $\lambda=-\gamma\pm i\,\omega_1$, com
+em que $\gamma$ é o fator de amortecimento. Para amortecimento fraco ($\gamma<\omega_0$), a solução dessa equação para a massa solta do repouso em $x=x_0$ é\cita{1}
+\begin{equation}
+x(t)=\left[x_0\,e^{-\gamma t}\right]\cos(\omega_1 t),
+\label{eq:xamort}
+\end{equation}
+em que a frequência angular da oscilação amortecida é
 \begin{equation}
 \omega_1=\sqrt{\omega_0^2-\gamma^2}.
 \label{eq:w1}
@@ -91,12 +92,7 @@ Ela mostra ainda que só há oscilação para $\gamma<\omega_0$. Em $\gamma=\ome
 
 Com o corpo ainda na água, a massa foi deslocada até uma amplitude inicial $x_0$ e solta a partir do repouso, sempre da mesma posição inicial. Registrou-se, na régua, a leitura $y_n$ da posição extrema da massa nos instantes $t_n=n\,T_1/2$ ($n=0,1,\dots,6$), isto é, de $t=0$ até $t=3T_1$, em que $T_1$ é o período obtido no Experimento 2. A posição de equilíbrio correspondeu à leitura $y_{eq}=70\un{cm}$, e a amplitude foi definida como $|x_n|=|y_n-y_{eq}|$. O procedimento foi realizado duas vezes.
 
-Para relacionar as amplitudes com $\gamma$, retoma-se a solução do Experimento 2. A solução real correspondente às raízes $\lambda=-\gamma\pm i\,\omega_1$ é $x(t)=e^{-\gamma t}\left[C_1\cos(\omega_1 t)+C_2\sin(\omega_1 t)\right]$. Impondo $x(0)=x_0$, obtém-se $C_1=x_0$; impondo $\dfrac{dx}{dt}(0)=0$, obtém-se $C_2=x_0\gamma/\omega_1$, termo desprezível quando o amortecimento é fraco ($\gamma\ll\omega_1$). Assim,
-\begin{equation}
-x(t)=\left[x_0\,e^{-\gamma t}\right]\cos(\omega_1 t).
-\label{eq:xamort}
-\end{equation}
-A posição oscila com período $T_1=2\pi/\omega_1$, e o termo entre colchetes faz as amplitudes extremas decrescerem exponencialmente. Como $\cos(\omega_1t)=\pm1$ nos instantes $t_n=n\,T_1/2$, as amplitudes medidas são $|x_n|=x_0e^{-\gamma t_n}$ e, aplicando o logaritmo natural,
+Para relacionar as amplitudes com $\gamma$, utiliza-se a Equação~\eqref{eq:xamort}. A posição oscila com período $T_1=2\pi/\omega_1$, e o termo entre colchetes faz as amplitudes extremas decrescerem exponencialmente. Como $\cos(\omega_1t)=\pm1$ nos instantes $t_n=n\,T_1/2$, as amplitudes medidas são $|x_n|=x_0e^{-\gamma t_n}$ e, aplicando o logaritmo natural,
 \begin{equation}
 \ln\left|\frac{x_n}{x_0}\right|=-\gamma\,t_n.
 \label{eq:ln}
@@ -117,11 +113,7 @@ Após o regime transitório, que decai como $e^{-\gamma t}$, a massa oscila com 
 \[
 x(t)=x_0(\Omega)\cos(\Omega t+\delta),
 \]
-em que $\delta$ é uma constante de fase que não será discutida nesta prática. Para determinar $x_0(\Omega)$, escreve-se $x(t)$ como a parte real de $X e^{i\Omega t}$, com $X=x_0e^{i\delta}$, e a força como a parte real de $F_0e^{i\Omega t}$. Como $\dfrac{d}{dt}e^{i\Omega t}=i\Omega\,e^{i\Omega t}$ e $\dfrac{d^2}{dt^2}e^{i\Omega t}=-\Omega^2e^{i\Omega t}$, a substituição na equação diferencial resulta em
-\[
-\left(\omega_0^2-\Omega^2+2i\gamma\Omega\right)X=\frac{F_0}{m},
-\]
-cujo módulo fornece a amplitude
+em que $\delta$ é uma constante de fase que não será discutida nesta prática. A amplitude dessa oscilação depende da frequência da força externa segundo\cita{1}
 \begin{equation}
 x_0(\Omega)=\frac{F_0/m}{\sqrt{\left(\omega_0^2-\Omega^2\right)^2+4\gamma^2\Omega^2}}.
 \label{eq:x0W}
