@@ -175,7 +175,7 @@ Uma das extremidades da corda foi presa ao pino do vibrador e a outra, após pas
 
 \subsubsection{Experimento 2}
 
-Com a bateria do microfone conectada e o gerador de funções ligado ao alto-falante, o pistão foi deslocado até que o comprimento da coluna de ar fosse $L=0{,}15\un{m}$. Partindo das menores frequências, para garantir a detecção do modo fundamental, a frequência do gerador foi aumentada até que o sinal do microfone no osciloscópio atingisse a máxima intensidade, condição que corresponde a uma onda estacionária no tubo. Registraram-se as frequências $f_n$ dos dez primeiros harmônicos sucessivos, que foram comparadas com os valores de referência calculados para $v=340\un{m/s}$. Com os dados, construiu-se o gráfico de $f_n$ em função de $n$ e determinou-se a velocidade do som por regressão linear (Seção~\ref{sec:mmq}).
+Com a bateria do microfone conectada e o gerador de funções ligado ao alto-falante, o pistão foi deslocado até que o comprimento da coluna de ar fosse $L=0{,}15\un{m}$. Partindo das menores frequências, para garantir a detecção do modo fundamental, a frequência do gerador foi aumentada até que o sinal do microfone no osciloscópio atingisse a máxima intensidade, condição que corresponde a uma onda estacionária no tubo. Registraram-se as frequências $f_n$ dos dez primeiros harmônicos sucessivos, que foram comparadas com os valores de referência calculados para $v=340\un{m/s}$. Com os dados, construiu-se o gráfico de $f_n$ em função de $n$ e determinou-se a velocidade do som pelo método dos mínimos quadrados.
 
 \subsubsection{Experimento 3}
 
@@ -187,17 +187,7 @@ As deduções a seguir seguem a apostila da disciplina\cita{1} e as referências
 
 \subsubsection{Velocidade de uma onda transversal em uma corda}
 
-Considere uma corda de densidade linear $\mu$, tensionada por uma força $F$, e seja $z(x,t)$ o deslocamento transversal do ponto $x$ no instante $t$. Um elemento de comprimento $dx$, de massa $\mu\,dx$, é puxado em suas extremidades pela tensão $F$, que forma pequenos ângulos $\theta(x)$ e $\theta(x+dx)$ com o eixo $x$. Para pequenas deformações, $\sin\theta\approx\tan\theta=\partial z/\partial x$, e a força resultante na direção $z$ é
-\[
-F\left[\frac{\partial z}{\partial x}\bigg|_{x+dx}-\frac{\partial z}{\partial x}\bigg|_{x}\right]=F\,\frac{\partial^2z}{\partial x^2}\,dx.
-\]
-Pela segunda lei de Newton,
-\[
-\mu\,dx\,\frac{\partial^2z}{\partial t^2}=F\,\frac{\partial^2z}{\partial x^2}\,dx
-\quad\Longrightarrow\quad
-\frac{\partial^2z}{\partial t^2}=\frac{F}{\mu}\,\frac{\partial^2z}{\partial x^2},
-\]
-que é a equação de onda. Uma onda harmônica progressiva $z=A\cos(kx-\omega t)$, com número de onda $k=2\pi/\lambda$ e frequência angular $\omega=2\pi f$, é solução se $\omega^2=(F/\mu)k^2$. A velocidade de propagação de uma crista é $v=\omega/k$, logo
+Em uma corda de densidade linear $\mu$, tensionada por uma força $F$, uma perturbação transversal se propaga com velocidade
 \begin{equation}
 v=\sqrt{\frac{F}{\mu}}
 \label{eq:vFmu}
@@ -236,7 +226,7 @@ isto é, as frequências dos harmônicos são múltiplos inteiros da frequência
 
 \subsubsection{Ondas sonoras estacionárias em um tubo fechado}
 
-No tubo, a onda sonora emitida pelo alto-falante é refletida no pistão e superpõe-se à onda incidente. Em uma parede rígida, o deslocamento das moléculas de ar é nulo e a pressão apresenta um antinó (crista); o mesmo ocorre, aproximadamente, junto à membrana do alto-falante\cita{1}. Escrevendo a variação de pressão da onda estacionária como $p(x,t)=p_0\cos(kx)\cos(\omega t)$, que tem antinó em $x=0$, a condição de antinó também em $x=L$ exige $\partial p/\partial x=0$, isto é, $\sin(kL)=0$. Obtém-se, portanto, a mesma condição da corda:
+No tubo, a onda sonora emitida pelo alto-falante é refletida no pistão e superpõe-se à onda incidente. Em uma parede rígida, o deslocamento das moléculas de ar é nulo e a pressão apresenta um antinó (crista); o mesmo ocorre, aproximadamente, junto à membrana do alto-falante\cita{1}. Como há um antinó de pressão em cada extremidade e antinós consecutivos estão separados por meio comprimento de onda (Figura 4.2 da apostila\cita{1}), o comprimento do tubo deve ser um múltiplo inteiro de $\lambda/2$. Obtém-se, portanto, a mesma condição da corda:
 \begin{equation}
 L=n\,\frac{\lambda_n}{2},
 \qquad
@@ -260,74 +250,12 @@ L_n=n\,\frac{\lambda}{2},
 \end{equation}
 de modo que a diferença entre comprimentos sucessivos deve ser constante e igual a meio comprimento de onda, $L_{n+1}-L_n=\lambda/2$. Conhecido $\lambda$, a velocidade do som é $v=\lambda f$.
 
-Na prática, a crista de pressão junto ao alto-falante não se localiza exatamente na abertura do tubo, de modo que o comprimento efetivo da coluna é $L+\delta$, em que $\delta$ é a chamada correção de extremidade\cita{4}. Nesse caso, as Equações~\eqref{eq:fsom} e~\eqref{eq:Ln} tornam-se
-\begin{equation}
-f_n=n\,\frac{v}{2(L+\delta)},
-\qquad
-L_n=n\,\frac{\lambda}{2}-\delta.
-\label{eq:delta}
-\end{equation}
-A correção não altera a linearidade, mas reduz o coeficiente angular de $f_n(n)$ e introduz um coeficiente linear $-\delta$ em $L_n(n)$.
-
-A velocidade do som no ar, tratado como gás ideal, é $v=\sqrt{\gamma_{ar}RT/M}$, em que $\gamma_{ar}=1{,}40$ é a razão entre os calores específicos, $R$ a constante dos gases, $M$ a massa molar do ar e $T$ a temperatura absoluta\cita{3,5}. Em função da temperatura $T_C$ em graus Celsius,
-\begin{equation}
-v\approx331{,}3\sqrt{1+\frac{T_C}{273{,}15}}\un{m/s},
-\label{eq:vT}
-\end{equation}
-o que fornece $v\approx343\un{m/s}$ a $20\un{^\circ C}$ e $v\approx346\un{m/s}$ a $25\un{^\circ C}$. Neste relatório, adota-se como valor de referência $v_{ref}=340\un{m/s}$, conforme indicado no roteiro.
-
-\subsubsection{Tratamento estatístico e propagação de incertezas}
-\label{sec:incertezas}
-
-Para $N$ valores $q_1,\dots,q_N$ de uma mesma grandeza, adota-se como melhor estimativa a média $\bar{q}=\frac{1}{N}\sum q_i$ e, conforme orientação do roteiro da prática, como incerteza o desvio médio absoluto
-\begin{equation}
-\Delta q=\frac{1}{N}\sum_{i=1}^{N}\left|q_i-\bar{q}\right|.
-\label{eq:dm}
-\end{equation}
-Se uma grandeza $f(q_1,\dots,q_M)$ é calculada a partir de grandezas independentes com incertezas $u(q_j)$, a expansão em primeira ordem $\delta f\approx\sum_j(\partial f/\partial q_j)\,\delta q_j$ fornece, elevando ao quadrado e tomando a média (os termos cruzados se anulam pela independência),
-\begin{equation}
-u(f)=\sqrt{\sum_{j=1}^{M}\left(\frac{\partial f}{\partial q_j}\right)^2u^2(q_j)}.
-\label{eq:prop}
-\end{equation}
-Aplicando a Equação~\eqref{eq:prop} às relações utilizadas, obtém-se:
-\begin{itemize}
-    \item densidade linear pela onda (Equação~\ref{eq:mu}), com $g=9{,}81\un{m/s^2}$ tomado como exato: como $\partial\mu/\partial m=g/v^2$ e $\partial\mu/\partial v=-2mg/v^3$,
-    \[
-    \frac{u(\mu)}{\mu}=\sqrt{\left(\frac{u(m)}{m}\right)^2+\left(\frac{2\,u(v)}{v}\right)^2};
-    \]
-    \item densidade linear pela amostra ($\mu_{real}=m_c/L_c$): como $\partial\mu/\partial m_c=1/L_c$ e $\partial\mu/\partial L_c=-m_c/L_c^2$,
-    \[
-    \frac{u(\mu_{real})}{\mu_{real}}=\sqrt{\left(\frac{u(m_c)}{m_c}\right)^2+\left(\frac{u(L_c)}{L_c}\right)^2};
-    \]
-    \item velocidade do som pelo coeficiente angular (Equação~\ref{eq:v2Lb}), com $L$ fixo: $u(v)=2L\,u(b)$;
-    \item velocidade do som pelo comprimento de onda ($v=\lambda f$), com a incerteza relativa da frequência desprezível (resolução de $0{,}1\un{Hz}$ em $2002{,}2\un{Hz}$): $u(v)=f\,u(\lambda)$.
-\end{itemize}
-
-\subsubsection{Método dos mínimos quadrados}
-\label{sec:mmq}
-
-Para ajustar uma reta $y=a+bx$ a $N$ pontos $(x_i,y_i)$, minimiza-se a soma dos quadrados dos resíduos $S=\sum_i\left(y_i-a-bx_i\right)^2$. As condições $\partial S/\partial a=0$ e $\partial S/\partial b=0$ resultam em $\sum y_i=Na+b\sum x_i$ e $\sum x_iy_i=a\sum x_i+b\sum x_i^2$, cuja solução é
-\[
-b=\frac{\sum_i\left(x_i-\bar{x}\right)\left(y_i-\bar{y}\right)}{S_{xx}},
-\qquad
-a=\bar{y}-b\,\bar{x},
-\qquad
-S_{xx}=\sum_i\left(x_i-\bar{x}\right)^2.
-\]
-Como $b=\sum_i c_iy_i$, com $c_i=(x_i-\bar{x})/S_{xx}$, a Equação~\eqref{eq:prop} fornece $u^2(b)=s_r^2\sum_ic_i^2$, ou seja,
-\[
-u(b)=\frac{s_r}{\sqrt{S_{xx}}},
-\qquad
-u(a)=s_r\sqrt{\frac{1}{N}+\frac{\bar{x}^2}{S_{xx}}},
-\qquad
-s_r=\sqrt{\frac{\sum_i\left(y_i-a-bx_i\right)^2}{N-2}},
-\]
-em que $s_r$ estima a dispersão dos pontos em torno da reta ($N-2$ graus de liberdade, pois dois parâmetros foram ajustados). A qualidade do alinhamento é avaliada pelo coeficiente de correlação $r=\sum_i(x_i-\bar{x})(y_i-\bar{y})\big/\sqrt{S_{xx}\sum_i(y_i-\bar{y})^2}$.
+Neste relatório, adota-se como valor de referência para a velocidade do som no ar $v_{ref}=340\un{m/s}$, conforme indicado no roteiro.
 
 % ======================== pags/3-Resultados_experimentais.tex ========================
 \section{Resultados e Discussões}
 
-As incertezas das grandezas obtidas a partir de vários harmônicos foram tomadas como o desvio médio absoluto (Equação~\ref{eq:dm}), e as dos coeficientes das retas, pelo método dos mínimos quadrados (Seção~\ref{sec:mmq}); as demais foram obtidas por propagação (Seção~\ref{sec:incertezas}). Os resultados foram arredondados apenas ao final dos cálculos.
+Conforme orientação do roteiro, as grandezas obtidas a partir de vários harmônicos foram expressas pela média, com incerteza dada pelo desvio médio, isto é, a média dos módulos das diferenças entre cada valor e a média. Os coeficientes das retas e suas incertezas foram obtidos pelo método dos mínimos quadrados (MMQ). Os resultados foram arredondados apenas ao final dos cálculos.
 
 \subsection{Ondas estacionárias na corda}
 
@@ -363,7 +291,7 @@ $n$ & $\lambda_n$ (m) & $f_n$ (Hz) & $v_n$ (m/s) & $|v_n-\bar{v}|$ (m/s) \\
 \fonte{Elaborada pelos autores.}
 \end{table}
 
-Pela Equação~\eqref{eq:dm},
+O desvio médio é
 \[
 \Delta v=\frac{15{,}28+5{,}28+11{,}39+0{,}28+4{,}72+4{,}72}{6}=6{,}94\un{m/s},
 \]
@@ -431,7 +359,6 @@ As frequências medidas apresentam, de fato, a proporção $f_n\approx n\,f_1$ e
     \item o comprimento vibrante efetivo da corda (entre o pino do vibrador e o ponto de contato com a roldana) pode ter sido diferente do valor de $1{,}0\un{m}$ registrado; com $\mu_{real}$, a tensão aplicada e $f_1\approx182\un{Hz}$, a Equação~\eqref{eq:fn} corresponderia a $L=v_{prev}/2f_1\approx0{,}17\un{m}$;
     \item os padrões identificados como harmônicos consecutivos podem não corresponder aos índices $n=1,\dots,6$: se os modos de ordem mais baixa, em torno de $31\un{Hz}$, não foram observados (por exemplo, por serem pouco excitados pelo vibrador), os índices atribuídos estariam deslocados, e a velocidade seria superestimada;
     \item o próprio vibrador (alto-falante) possui ressonâncias mecânicas, que podem produzir máximos de amplitude não associados aos modos da corda;
-    \item a massa de $182{,}77\un{g}$ e o comprimento de $1{,}0\un{m}$ coincidem com os dados fornecidos no roteiro para a amostra da corda grossa usada em outro experimento, o que sugere a possibilidade de erro no registro dos parâmetros da montagem.
 \end{enumerate}
 Em qualquer caso, a medida das frequências por inspeção visual da máxima amplitude não é capaz, por si só, de explicar um fator de 33 em $\mu$ (que corresponde a um fator de aproximadamente $5{,}8$ na velocidade), de modo que a discrepância deve ser atribuída a um erro sistemático nos parâmetros $L$, $F$ ou $n$, e não à dispersão aleatória das medidas.
 
@@ -496,15 +423,10 @@ A Figura~\ref{fig:som_f} mostra o gráfico de $f_n$ em função de $n$. Os ponto
 \fonte{Elaborada pelos autores.}
 \end{figure}
 
-Aplicando o método dos mínimos quadrados (Seção~\ref{sec:mmq}) aos $N=10$ pontos $(n,f_n)$, com $\bar{n}=5{,}5$, $\bar{f}=5916{,}1\un{Hz}$ e $S_{nn}=82{,}5$, obteve-se
+Aplicando o método dos mínimos quadrados aos dez pontos $(n,f_n)$, obteve-se
 \begin{gather*}
-b=1076{,}6\un{Hz},\\
-a=5916{,}1-(1076{,}6)(5{,}5)=-5{,}5\un{Hz},\\
-s_r=98{,}2\un{Hz},
-\end{gather*}
-\begin{gather*}
-u(b)=\frac{98{,}2}{\sqrt{82{,}5}}=10{,}8\un{Hz},\\
-u(a)=98{,}2\sqrt{\frac{1}{10}+\frac{5{,}5^2}{82{,}5}}=67\un{Hz},\\
+b=(1076{,}6\pm10{,}8)\un{Hz},\\
+a=(-5\pm67)\un{Hz},\\
 r=0{,}9996.
 \end{gather*}
 Pela Equação~\eqref{eq:v2Lb}, a velocidade do som é
@@ -524,7 +446,7 @@ Para garantir que o primeiro harmônico observado corresponde a $n=1$, o experim
 
 A Tabela~\ref{tab:som_f} mostra que os dois primeiros harmônicos concordam com a referência, mas, a partir de $n=3$, as frequências medidas ficam sistematicamente entre $3\%$ e $7\%$ abaixo dela. Como o desvio é aproximadamente proporcional a $n$, ele corresponde a uma redução do coeficiente angular, e não a um erro aleatório. Algumas causas plausíveis são:
 \begin{enumerate}
-    \item a correção de extremidade (Equação~\ref{eq:delta}): a crista de pressão junto ao alto-falante não se localiza exatamente na abertura do tubo, e o comprimento efetivo da coluna é maior que $L$. O coeficiente angular obtido corresponde a um comprimento efetivo $L_{ef}=v_{ref}/2b=340/(2\cdot1076{,}6)=0{,}158\un{m}$, ou seja, $\delta\approx0{,}8\un{cm}$, valor muito próximo da correção obtida de forma independente no Experimento 3 ($\delta=0{,}75\un{cm}$, Seção~\ref{sec:som_L}). Utilizando esse valor, $v=2(L+\delta)b=2\cdot0{,}1575\cdot1076{,}6=339\un{m/s}$, em ótima concordância com a referência;
+    \item a crista de pressão junto ao alto-falante não se localiza exatamente na abertura do tubo\cita{4}, de modo que o comprimento efetivo da coluna de ar, $L+\delta$, é um pouco maior que o lido na escala. O coeficiente angular obtido corresponde a um comprimento efetivo $L_{ef}=v_{ref}/2b=340/(2\cdot1076{,}6)=0{,}158\un{m}$, ou seja, $\delta\approx0{,}8\un{cm}$, valor muito próximo da correção obtida de forma independente no Experimento 3 ($\delta=0{,}75\un{cm}$, Seção~\ref{sec:som_L}). Utilizando esse valor, $v=2(L+\delta)b=2\cdot0{,}1575\cdot1076{,}6=339\un{m/s}$, em ótima concordância com a referência;
     \item o comprimento $L=0{,}15\un{m}$ foi ajustado de forma aproximada na escala do tubo, e sua incerteza não foi incluída em $u(v)$; uma diferença de $0{,}5\un{cm}$ em $L$ altera $v$ em $3\%$;
     \item a mudança brusca de comportamento entre $n=2$ e $n=3$ sugere que o pistão pode ter sido levemente deslocado durante as medidas, ou que alguns máximos foram identificados com dificuldade no osciloscópio, já que, em altas frequências, a resposta do alto-falante e do microfone varia com a frequência e os picos de ressonância se tornam menos nítidos.
 \end{enumerate}
@@ -561,10 +483,10 @@ De acordo com a Equação~\eqref{eq:Ln}, as diferenças entre comprimentos suces
 
 \subsubsection{Comprimento de onda e velocidade pela média}
 
-Seguindo o procedimento do roteiro, a média dos dez comprimentos de onda $\lambda_n=2L_n/n$ e seu desvio médio (Equação~\ref{eq:dm}) são
+Seguindo o procedimento do roteiro, a média dos dez comprimentos de onda $\lambda_n=2L_n/n$ da Tabela~\ref{tab:som_L} e seu desvio médio são
 \begin{gather*}
-\bar{\lambda}=\frac{1}{10}\sum_{n=1}^{10}\lambda_n=16{,}81\un{cm},\\
-\Delta\lambda=\frac{1}{10}\sum_{n=1}^{10}\left|\lambda_n-\bar{\lambda}\right|=0{,}27\un{cm},
+\bar{\lambda}=\frac{16{,}00+16{,}40+16{,}67+16{,}90+16{,}96+3\cdot17{,}00+17{,}11+17{,}10}{10}=16{,}81\un{cm},\\
+\Delta\lambda=\frac{0{,}81+0{,}41+0{,}15+0{,}09+0{,}15+0{,}19+0{,}19+0{,}19+0{,}30+0{,}29}{10}=0{,}27\un{cm},
 \end{gather*}
 isto é, $\lambda=(16{,}8\pm0{,}3)\un{cm}$. A velocidade do som resulta em
 \begin{gather*}
@@ -577,11 +499,11 @@ v=(337\pm6)\un{m/s},
 \]
 compatível com o valor de referência de $340\un{m/s}$ (diferença de $1{,}0\%$, menor que a incerteza).
 
-Observa-se, entretanto, na Tabela~\ref{tab:som_L}, que $\lambda_n$ cresce sistematicamente com $n$, de $16{,}00\un{cm}$ para $n=1$ até aproximadamente $17{,}1\un{cm}$ para $n\ge9$. Esse comportamento é explicado pela correção de extremidade: pela Equação~\eqref{eq:delta}, $\lambda_n=2L_n/n=\lambda-2\delta/n$, de modo que o erro é maior para os primeiros harmônicos e diminui com $n$. Assim, a média simples de $\lambda_n$ é deslocada para valores menores, e o desvio médio reflete principalmente esse efeito sistemático, e não a dispersão aleatória.
+Observa-se, entretanto, na Tabela~\ref{tab:som_L}, que $\lambda_n$ cresce sistematicamente com $n$, de $16{,}00\un{cm}$ para $n=1$ até aproximadamente $17{,}1\un{cm}$ para $n\ge9$. Esse comportamento é explicado pela diferença $\delta$ entre o comprimento efetivo da coluna e o lido na escala: se cada $L_n$ medido é menor que o efetivo por um mesmo valor $\delta$, então $\lambda_n=2L_n/n$ fica menor que $\lambda$ por $2\delta/n$, erro que é maior para os primeiros harmônicos e diminui com $n$. Assim, a média simples de $\lambda_n$ é deslocada para valores menores, e o desvio médio reflete principalmente esse efeito sistemático, e não a dispersão aleatória.
 
 \subsubsection{Comprimento de onda e velocidade pelo método dos mínimos quadrados}
 
-Para eliminar o efeito da correção de extremidade, ajustou-se a reta $L_n=a+b\,n$ aos dez pontos, em que, pela Equação~\eqref{eq:delta}, $b=\lambda/2$ e $a=-\delta$. A Figura~\ref{fig:som_L} mostra os dados e a reta ajustada.
+Para eliminar esse efeito, ajustou-se a reta $L_n=a+b\,n$ aos dez pontos. Pela Equação~\eqref{eq:Ln}, o coeficiente angular é $b=\lambda/2$, e a diferença constante $\delta$ aparece apenas no coeficiente linear, $a=-\delta$, sem afetar $b$. A Figura~\ref{fig:som_L} mostra os dados e a reta ajustada.
 
 \begin{figure}[H]
 \centering
@@ -608,18 +530,13 @@ Para eliminar o efeito da correção de extremidade, ajustou-se a reta $L_n=a+b\
 \fonte{Elaborada pelos autores.}
 \end{figure}
 
-Com $\bar{n}=5{,}5$, $\bar{L}=46{,}66\un{cm}$ e $S_{nn}=82{,}5$, obteve-se
+Pelo método dos mínimos quadrados, obteve-se
 \begin{gather*}
-b=8{,}621\un{cm},\\
-a=46{,}66-(8{,}621)(5{,}5)=-0{,}75\un{cm},\\
-s_r=0{,}127\un{cm},
-\end{gather*}
-\begin{gather*}
-u(b)=\frac{0{,}127}{\sqrt{82{,}5}}=0{,}014\un{cm},\\
-u(a)=0{,}127\sqrt{\frac{1}{10}+\frac{5{,}5^2}{82{,}5}}=0{,}087\un{cm},\\
+b=(8{,}621\pm0{,}014)\un{cm},\\
+a=(-0{,}75\pm0{,}09)\un{cm},\\
 r=0{,}99999.
 \end{gather*}
-O coeficiente de correlação muito próximo de 1 e a dispersão dos resíduos ($s_r=0{,}13\un{cm}$, da ordem da resolução de leitura) confirmam a relação linear prevista. O comprimento de onda e a velocidade do som resultam em
+O coeficiente de correlação muito próximo de 1 confirma a relação linear prevista. O comprimento de onda e a velocidade do som resultam em
 \begin{gather*}
 \lambda=2b=17{,}24\un{cm},\qquad u(\lambda)=2\,u(b)=0{,}028\un{cm},\\
 v=\lambda f=0{,}17241\cdot2002{,}2=345{,}2\un{m/s},\qquad u(v)=2002{,}2\cdot0{,}00028=0{,}6\un{m/s},
@@ -628,7 +545,7 @@ ou seja, $\lambda=(17{,}24\pm0{,}03)\un{cm}$ e
 \[
 v=(345{,}2\pm0{,}6)\un{m/s}.
 \]
-O coeficiente linear, $a=(-0{,}75\pm0{,}09)\un{cm}$, é significativamente diferente de zero e corresponde a uma correção de extremidade $\delta=(0{,}75\pm0{,}09)\un{cm}$, isto é, o comprimento efetivo da coluna de ar é $0{,}75\un{cm}$ maior que o lido na escala. Pela Equação~\eqref{eq:vT}, a velocidade obtida corresponde a uma temperatura do ar de aproximadamente $23\un{^\circ C}$, típica do laboratório, o que mostra que a diferença de $1{,}5\%$ em relação a $340\un{m/s}$ se deve, em grande parte, ao fato de o valor de referência corresponder a uma temperatura mais baixa (cerca de $15\un{^\circ C}$).
+O valor difere em $1{,}5\%$ do de referência. O coeficiente linear, $a=(-0{,}75\pm0{,}09)\un{cm}$, é significativamente diferente de zero e corresponde a $\delta=(0{,}75\pm0{,}09)\un{cm}$, isto é, o comprimento efetivo da coluna de ar é $0{,}75\un{cm}$ maior que o lido na escala, possivelmente porque a crista de pressão junto ao alto-falante não se localiza exatamente na abertura do tubo\cita{4}.
 
 \subsubsection{Comparação entre os Experimentos 2 e 3}
 
@@ -663,7 +580,7 @@ Os experimentos permitiram observar ondas estacionárias em uma corda com extrem
 
 Na corda, as frequências dos seis primeiros harmônicos foram aproximadamente múltiplos inteiros da fundamental, e a velocidade da onda foi praticamente constante entre os harmônicos, com $v=(355\pm7)\un{m/s}$. A densidade linear obtida a partir dessa velocidade e da tensão aplicada, $\mu=(1{,}42\pm0{,}06)\times10^{-5}\un{kg/m}$, entretanto, não é consistente com a densidade da corda utilizada, $\mu_{real}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$, sendo cerca de 33 vezes menor. Como a estrutura harmônica foi observada corretamente, a discrepância foi atribuída a um erro sistemático nos parâmetros da montagem (comprimento vibrante, tensão ou identificação do índice dos harmônicos), e não à dispersão aleatória das medidas.
 
-No tubo com $L=0{,}15\un{m}$, a frequência fundamental medida, $1131\un{Hz}$, coincidiu com a esperada ($1133\un{Hz}$), e o gráfico de $f_n$ em função de $n$ mostrou relação linear, com coeficiente linear compatível com zero. A velocidade do som obtida pelo coeficiente angular, $(323\pm3)\un{m/s}$, ficou $5\%$ abaixo da referência, desvio explicado pela correção de extremidade do tubo. Com frequência fixa de $2002{,}2\un{Hz}$, as diferenças entre comprimentos de ressonância sucessivos foram praticamente constantes, como previsto, e o ajuste linear de $L_n$ em função de $n$ forneceu $\lambda=(17{,}24\pm0{,}03)\un{cm}$, $v=(345{,}2\pm0{,}6)\un{m/s}$ e uma correção de extremidade $\delta=(0{,}75\pm0{,}09)\un{cm}$. Aplicando essa correção ao Experimento 2, obteve-se $v=(339\pm3)\un{m/s}$, o que torna os dois experimentos coerentes entre si e com o valor de referência, considerando o efeito da temperatura sobre a velocidade do som.
+No tubo com $L=0{,}15\un{m}$, a frequência fundamental medida, $1131\un{Hz}$, coincidiu com a esperada ($1133\un{Hz}$), e o gráfico de $f_n$ em função de $n$ mostrou relação linear, com coeficiente linear compatível com zero. A velocidade do som obtida pelo coeficiente angular, $(323\pm3)\un{m/s}$, ficou $5\%$ abaixo da referência, desvio explicado pela correção de extremidade do tubo. Com frequência fixa de $2002{,}2\un{Hz}$, as diferenças entre comprimentos de ressonância sucessivos foram praticamente constantes, como previsto, e o ajuste linear de $L_n$ em função de $n$ forneceu $\lambda=(17{,}24\pm0{,}03)\un{cm}$, $v=(345{,}2\pm0{,}6)\un{m/s}$ e uma correção de extremidade $\delta=(0{,}75\pm0{,}09)\un{cm}$. Aplicando essa correção ao Experimento 2, obteve-se $v=(339\pm3)\un{m/s}$, o que torna os dois experimentos coerentes entre si e com o valor de referência.
 
 Assim, a prática permitiu compreender experimentalmente a formação de ondas estacionárias e a determinação da velocidade de propagação de ondas em diferentes meios, além de evidenciar a importância de identificar e corrigir erros sistemáticos, como a correção de extremidade, e de registrar com cuidado os parâmetros da montagem experimental.
 
@@ -675,7 +592,6 @@ Assim, a prática permitiu compreender experimentalmente a formação de ondas e
     \item HALLIDAY, D.; RESNICK, R.; WALKER, J. \textbf{Fundamentos de física}: gravitação, ondas e termodinâmica. 10. ed. Rio de Janeiro: LTC, 2016. v. 2.
     \item NUSSENZVEIG, H. M. \textbf{Curso de física básica}: fluidos, oscilações e ondas, calor. 5. ed. São Paulo: Blucher, 2014. v. 2.
     \item PIZETTA, D. C.; WANDERLEY, A. B.; MASTELARO, V. R.; PAIVA, F. F. Uma avaliação experimental do tubo de ondas sonoras estacionárias. \textbf{Revista Brasileira de Ensino de Física}, São Paulo, v. 39, n. 3, e3301, 2017.
-    \item BOHN, D. A. Environmental effects on the speed of sound. \textbf{Journal of the Audio Engineering Society}, v. 36, n. 4, p. 223-231, 1988.
 \end{enumerate}
 
 
