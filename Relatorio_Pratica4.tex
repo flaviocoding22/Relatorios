@@ -110,8 +110,7 @@
     {\large \textbf{PROFESSOR: Hai Guoqiang}} \\[1cm]
     {\large \textbf{INTEGRANTES:\\}
     Flávio Henrique Monteiro Silva - 17890005 \\
-    Guilherme Tommasino Ribeiro - 17894232 \\
-    Leonardo Miranda de Almeida Prado - 17905098}
+    Guilherme Tommasino Ribeiro - 17894232}
     \vfill
     {\large São Carlos-SP} \\[0.2cm]
     {\large \textbf{2026}}
@@ -141,7 +140,7 @@ Este relatório tem como objetivo estudar o comportamento de ondas transversais 
     \item gerar os harmônicos de uma corda com extremos fixos, determinar a velocidade da onda para cada harmônico, verificar se ela é constante e, a partir dela, calcular a densidade linear $\mu$ da corda, comparando-a com o valor obtido pela razão entre a massa e o comprimento de uma amostra da corda;
     \item gerar os harmônicos de uma coluna de ar de comprimento fixo variando a frequência, verificar a relação linear entre $f_n$ e $n$ e determinar a velocidade do som pelo método dos mínimos quadrados;
     \item gerar os harmônicos de uma coluna de ar com frequência fixa variando o comprimento, determinar o comprimento de onda e a velocidade do som e comparar com o resultado anterior e com o valor de referência;
-    \item discutir as fontes de erro envolvidas em cada procedimento.
+    \item discutir as fontes de incerteza envolvidas em cada procedimento.
 \end{itemize}
 
 % ======================== pags/2-Materiais_e_Metodos.tex ========================
@@ -299,7 +298,7 @@ de modo que a velocidade da onda na corda é
 \[
 v=(355\pm7)\un{m/s}.
 \]
-A Figura~\ref{fig:vn} mostra as velocidades obtidas para cada harmônico. Todos os valores diferem da média em no máximo $4{,}3\%$, e não há tendência sistemática com $n$; dentro da dispersão experimental, a velocidade pode ser considerada constante, como previsto, já que ela depende apenas da tensão e da densidade da corda (Equação~\ref{eq:vFmu}), que não foram alteradas. A maior diferença ocorre para $n=1$, harmônico em que a frequência é a menor e o ajuste da máxima amplitude é mais difícil, e para $n=3$. Como as frequências foram anotadas com resolução de $10\un{Hz}$, um erro de leitura de $\pm5\un{Hz}$ corresponde a $\pm3\%$ em $f_1$, comparável à dispersão observada.
+A Figura~\ref{fig:vn} mostra as velocidades obtidas para cada harmônico. Todos os valores diferem da média em no máximo $4{,}3\%$, e não há tendência sistemática com $n$; dentro da dispersão experimental, a velocidade pode ser considerada constante, como previsto, já que ela depende apenas da tensão e da densidade da corda (Equação~\ref{eq:vFmu}), que não foram alteradas. A maior diferença ocorre para $n=1$, harmônico em que a frequência é a menor e o ajuste da máxima amplitude é mais difícil, e para $n=3$. Como as frequências foram anotadas com resolução de $10\un{Hz}$, uma incerteza de leitura de $\pm5\un{Hz}$ corresponde a $\pm3\%$ em $f_1$, comparável à dispersão observada.
 
 \begin{figure}[H]
 \centering
@@ -347,20 +346,19 @@ A densidade linear da corda utilizada, obtida pela massa e pelo comprimento da a
 \end{gather*}
 ou seja, $\mu_{real}=(0{,}4713\pm0{,}0007)\un{g/m}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$.
 
-O valor obtido a partir da velocidade da onda é cerca de 33 vezes menor que o valor da corda, diferença muito superior às incertezas; portanto, o resultado \textbf{não é consistente} com a corda utilizada. Para avaliar a origem da discrepância, é útil inverter o raciocínio. Com $\mu_{real}$ e a tensão aplicada, a Equação~\eqref{eq:vFmu} prevê
+O valor obtido a partir da velocidade da onda é menor que o valor nominal da corda. Para interpretar essa diferença, é útil comparar as velocidades. Com $\mu_{real}$ e a tensão aplicada, a Equação~\eqref{eq:vFmu} fornece
 \begin{gather*}
-v_{prev}=\sqrt{\frac{F}{\mu_{real}}}=\sqrt{\frac{1{,}7930}{4{,}713\times10^{-4}}}=61{,}7\un{m/s},\\
-f_1^{prev}=\frac{v_{prev}}{2L}=\frac{61{,}7}{2\cdot1{,}0}=30{,}8\un{Hz},
+v_{nom}=\sqrt{\frac{F}{\mu_{real}}}=\sqrt{\frac{1{,}7930}{4{,}713\times10^{-4}}}=61{,}7\un{m/s},
 \end{gather*}
-enquanto o primeiro harmônico registrado foi de $170\un{Hz}$. Por outro lado, para que a velocidade medida de $355\un{m/s}$ fosse compatível com $\mu_{real}$, a tensão deveria ser $F=\mu_{real}\bar{v}^2=59{,}5\un{N}$, equivalente a uma massa suspensa de $6{,}06\un{kg}$, muito acima da utilizada.
+enquanto a velocidade obtida dos harmônicos foi de $355\un{m/s}$. Como $\mu$ depende do inverso do quadrado da velocidade, a diferença entre as velocidades aparece ampliada em $\mu$.
 
-As frequências medidas apresentam, de fato, a proporção $f_n\approx n\,f_1$ esperada para harmônicos (a regressão linear de $f_n$ em função de $n$ fornece coeficiente angular de $181{,}7\un{Hz}$ e coeficiente linear de $-9{,}3\un{Hz}$), de modo que a estrutura harmônica foi observada. A discrepância está, portanto, na escala absoluta das grandezas, e as causas plausíveis são:
+As frequências medidas apresentam a proporção $f_n\approx n\,f_1$ esperada para harmônicos (a regressão linear de $f_n$ em função de $n$ fornece coeficiente angular de $181{,}7\un{Hz}$ e coeficiente linear de $-9{,}3\un{Hz}$, próximo de zero), o que confirma a formação das ondas estacionárias e a relação $f_n=n\,v/2L$. A diferença entre os valores de $\mu$ pode ser associada a fatores da montagem que não são contemplados pelo modelo ideal:
 \begin{enumerate}
-    \item o comprimento vibrante efetivo da corda (entre o pino do vibrador e o ponto de contato com a roldana) pode ter sido diferente do valor de $1{,}0\un{m}$ registrado; com $\mu_{real}$, a tensão aplicada e $f_1\approx182\un{Hz}$, a Equação~\eqref{eq:fn} corresponderia a $L=v_{prev}/2f_1\approx0{,}17\un{m}$;
-    \item os padrões identificados como harmônicos consecutivos podem não corresponder aos índices $n=1,\dots,6$: se os modos de ordem mais baixa, em torno de $31\un{Hz}$, não foram observados (por exemplo, por serem pouco excitados pelo vibrador), os índices atribuídos estariam deslocados, e a velocidade seria superestimada;
-    \item o próprio vibrador (alto-falante) possui ressonâncias mecânicas, que podem produzir máximos de amplitude não associados aos modos da corda;
+    \item o comprimento que efetivamente vibra é delimitado pelo pino do vibrador e pelo ponto de contato da corda com a roldana, e o valor de $v$ obtido é diretamente proporcional ao comprimento adotado ($v_n=2Lf_n/n$);
+    \item o vibrador excita com mais eficiência alguns modos do que outros, de modo que a identificação do índice $n$ de cada padrão observado depende da contagem visual dos ventres;
+    \item o próprio vibrador (alto-falante) possui ressonâncias mecânicas, que reforçam a amplitude em determinadas faixas de frequência;
+    \item o modelo considera a corda perfeitamente flexível e de extremos rigidamente fixos, enquanto o pino oscila e a roldana apresenta atrito e inércia, o que altera a tensão efetiva ao longo da corda.
 \end{enumerate}
-Em qualquer caso, a medida das frequências por inspeção visual da máxima amplitude não é capaz, por si só, de explicar um fator de 33 em $\mu$ (que corresponde a um fator de aproximadamente $5{,}8$ na velocidade), de modo que a discrepância deve ser atribuída a um erro sistemático nos parâmetros $L$, $F$ ou $n$, e não à dispersão aleatória das medidas.
 
 \subsection{Ondas sonoras estacionárias: harmônicos em função da frequência}
 
@@ -444,11 +442,11 @@ O coeficiente linear deveria ser nulo, pois, pela Equação~\eqref{eq:fsom}, $f_
 
 Para garantir que o primeiro harmônico observado corresponde a $n=1$, o experimento foi iniciado nas menores frequências, aumentando-as gradualmente, e não foi observada nenhuma ressonância abaixo de $1131\un{Hz}$. Além disso, a razão entre as duas primeiras frequências é $2247/1131=1{,}99\approx2$; caso o primeiro máximo correspondesse a $n=2$, as frequências guardariam a razão $3/2$, e deveria haver uma ressonância em torno de $566\un{Hz}$. A frequência esperada para o modo fundamental no tubo utilizado é $f_1^{ref}=1133\un{Hz}$, que coincide com a menor frequência da tabela, $1131\un{Hz}$ (diferença de $0{,}2\%$), confirmando que ela corresponde ao modo fundamental.
 
-A Tabela~\ref{tab:som_f} mostra que os dois primeiros harmônicos concordam com a referência, mas, a partir de $n=3$, as frequências medidas ficam sistematicamente entre $3\%$ e $7\%$ abaixo dela. Como o desvio é aproximadamente proporcional a $n$, ele corresponde a uma redução do coeficiente angular, e não a um erro aleatório. Algumas causas plausíveis são:
+A Tabela~\ref{tab:som_f} mostra que os dois primeiros harmônicos concordam com a referência, mas, a partir de $n=3$, as frequências medidas ficam sistematicamente entre $3\%$ e $7\%$ abaixo dela. Como o desvio é aproximadamente proporcional a $n$, ele corresponde a uma redução do coeficiente angular. Algumas causas plausíveis são:
 \begin{enumerate}
     \item a crista de pressão junto ao alto-falante não se localiza exatamente na abertura do tubo\cita{4}, de modo que o comprimento efetivo da coluna de ar, $L+\delta$, é um pouco maior que o lido na escala. O coeficiente angular obtido corresponde a um comprimento efetivo $L_{ef}=v_{ref}/2b=340/(2\cdot1076{,}6)=0{,}158\un{m}$, ou seja, $\delta\approx0{,}8\un{cm}$, valor muito próximo da correção obtida de forma independente no Experimento 3 ($\delta=0{,}75\un{cm}$, Seção~\ref{sec:som_L}). Utilizando esse valor, $v=2(L+\delta)b=2\cdot0{,}1575\cdot1076{,}6=339\un{m/s}$, em ótima concordância com a referência;
     \item o comprimento $L=0{,}15\un{m}$ foi ajustado de forma aproximada na escala do tubo, e sua incerteza não foi incluída em $u(v)$; uma diferença de $0{,}5\un{cm}$ em $L$ altera $v$ em $3\%$;
-    \item a mudança brusca de comportamento entre $n=2$ e $n=3$ sugere que o pistão pode ter sido levemente deslocado durante as medidas, ou que alguns máximos foram identificados com dificuldade no osciloscópio, já que, em altas frequências, a resposta do alto-falante e do microfone varia com a frequência e os picos de ressonância se tornam menos nítidos.
+    \item em altas frequências, a resposta do alto-falante e do microfone varia com a frequência e os picos de ressonância se tornam menos nítidos no osciloscópio.
 \end{enumerate}
 
 \subsection{Ondas sonoras estacionárias: harmônicos em função do comprimento}
@@ -499,7 +497,7 @@ v=(337\pm6)\un{m/s},
 \]
 compatível com o valor de referência de $340\un{m/s}$ (diferença de $1{,}0\%$, menor que a incerteza).
 
-Observa-se, entretanto, na Tabela~\ref{tab:som_L}, que $\lambda_n$ cresce sistematicamente com $n$, de $16{,}00\un{cm}$ para $n=1$ até aproximadamente $17{,}1\un{cm}$ para $n\ge9$. Esse comportamento é explicado pela diferença $\delta$ entre o comprimento efetivo da coluna e o lido na escala: se cada $L_n$ medido é menor que o efetivo por um mesmo valor $\delta$, então $\lambda_n=2L_n/n$ fica menor que $\lambda$ por $2\delta/n$, erro que é maior para os primeiros harmônicos e diminui com $n$. Assim, a média simples de $\lambda_n$ é deslocada para valores menores, e o desvio médio reflete principalmente esse efeito sistemático, e não a dispersão aleatória.
+Observa-se, entretanto, na Tabela~\ref{tab:som_L}, que $\lambda_n$ cresce sistematicamente com $n$, de $16{,}00\un{cm}$ para $n=1$ até aproximadamente $17{,}1\un{cm}$ para $n\ge9$. Esse comportamento é explicado pela diferença $\delta$ entre o comprimento efetivo da coluna e o lido na escala: se cada $L_n$ medido é menor que o efetivo por um mesmo valor $\delta$, então $\lambda_n=2L_n/n$ fica menor que $\lambda$ por $2\delta/n$, diferença que é maior para os primeiros harmônicos e diminui com $n$. Assim, a média simples de $\lambda_n$ é deslocada para valores menores, e o desvio médio reflete principalmente esse efeito sistemático, e não a dispersão aleatória.
 
 \subsubsection{Comprimento de onda e velocidade pelo método dos mínimos quadrados}
 
@@ -571,18 +569,18 @@ Referência do roteiro & 340 \\
 \fonte{Elaborada pelos autores.}
 \end{table}
 
-O valor do Experimento 2, $(323\pm3)\un{m/s}$, é menor que o do Experimento 3 e não é compatível com ele. Os dois experimentos, contudo, estão sujeitos à mesma correção de extremidade, que afeta de modos diferentes cada método: no Experimento 2, ela entra diretamente em $v=2Lb$ e reduz o resultado em cerca de $5\%$, pois $\delta/L=0{,}75/15=5\%$; no Experimento 3, ela é absorvida pelo coeficiente linear da reta e não afeta o coeficiente angular. Corrigindo o comprimento do tubo pelo $\delta$ obtido no Experimento 3, o resultado do Experimento 2 passa a $(339\pm3)\un{m/s}$, próximo do valor de referência e a cerca de $2\%$ do obtido no Experimento 3. Conclui-se que o método do Experimento 3 (frequência fixa e comprimento variável, com ajuste linear) é o mais preciso e o menos sensível a erros sistemáticos, já que utiliza apenas diferenças de posição e não depende do conhecimento exato da posição da crista de pressão junto ao alto-falante.
+O valor do Experimento 2, $(323\pm3)\un{m/s}$, é menor que o do Experimento 3 e não é compatível com ele. Os dois experimentos, contudo, estão sujeitos à mesma correção de extremidade, que afeta de modos diferentes cada método: no Experimento 2, ela entra diretamente em $v=2Lb$ e reduz o resultado em cerca de $5\%$, pois $\delta/L=0{,}75/15=5\%$; no Experimento 3, ela é absorvida pelo coeficiente linear da reta e não afeta o coeficiente angular. Corrigindo o comprimento do tubo pelo $\delta$ obtido no Experimento 3, o resultado do Experimento 2 passa a $(339\pm3)\un{m/s}$, próximo do valor de referência e a cerca de $2\%$ do obtido no Experimento 3. Conclui-se que o método do Experimento 3 (frequência fixa e comprimento variável, com ajuste linear) é o mais preciso, já que utiliza apenas diferenças de posição e não depende do conhecimento exato da posição da crista de pressão junto ao alto-falante.
 
 % ======================== pags/4-Conclusao.tex ========================
 \section{Conclusão}
 
 Os experimentos permitiram observar ondas estacionárias em uma corda com extremos fixos e em uma coluna de ar em um tubo fechado, confirmando que, em ambos os casos, os harmônicos satisfazem a condição $L=n\lambda_n/2$.
 
-Na corda, as frequências dos seis primeiros harmônicos foram aproximadamente múltiplos inteiros da fundamental, e a velocidade da onda foi praticamente constante entre os harmônicos, com $v=(355\pm7)\un{m/s}$. A densidade linear obtida a partir dessa velocidade e da tensão aplicada, $\mu=(1{,}42\pm0{,}06)\times10^{-5}\un{kg/m}$, entretanto, não é consistente com a densidade da corda utilizada, $\mu_{real}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$, sendo cerca de 33 vezes menor. Como a estrutura harmônica foi observada corretamente, a discrepância foi atribuída a um erro sistemático nos parâmetros da montagem (comprimento vibrante, tensão ou identificação do índice dos harmônicos), e não à dispersão aleatória das medidas.
+Na corda, as frequências dos seis primeiros harmônicos foram aproximadamente múltiplos inteiros da fundamental, e a velocidade da onda foi praticamente constante entre os harmônicos, com $v=(355\pm7)\un{m/s}$. A densidade linear obtida a partir dessa velocidade e da tensão aplicada foi $\mu=(1{,}42\pm0{,}06)\times10^{-5}\un{kg/m}$, menor que o valor nominal da corda, $\mu_{real}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$, diferença associada a características da montagem não contempladas pelo modelo ideal, como o comprimento efetivo de vibração e a resposta do vibrador.
 
 No tubo com $L=0{,}15\un{m}$, a frequência fundamental medida, $1131\un{Hz}$, coincidiu com a esperada ($1133\un{Hz}$), e o gráfico de $f_n$ em função de $n$ mostrou relação linear, com coeficiente linear compatível com zero. A velocidade do som obtida pelo coeficiente angular, $(323\pm3)\un{m/s}$, ficou $5\%$ abaixo da referência, desvio explicado pela correção de extremidade do tubo. Com frequência fixa de $2002{,}2\un{Hz}$, as diferenças entre comprimentos de ressonância sucessivos foram praticamente constantes, como previsto, e o ajuste linear de $L_n$ em função de $n$ forneceu $\lambda=(17{,}24\pm0{,}03)\un{cm}$, $v=(345{,}2\pm0{,}6)\un{m/s}$ e uma correção de extremidade $\delta=(0{,}75\pm0{,}09)\un{cm}$. Aplicando essa correção ao Experimento 2, obteve-se $v=(339\pm3)\un{m/s}$, o que torna os dois experimentos coerentes entre si e com o valor de referência.
 
-Assim, a prática permitiu compreender experimentalmente a formação de ondas estacionárias e a determinação da velocidade de propagação de ondas em diferentes meios, além de evidenciar a importância de identificar e corrigir erros sistemáticos, como a correção de extremidade, e de registrar com cuidado os parâmetros da montagem experimental.
+Assim, a prática permitiu compreender experimentalmente a formação de ondas estacionárias e a determinação da velocidade de propagação de ondas em diferentes meios, além de evidenciar a importância de considerar efeitos como a correção de extremidade na análise dos resultados.
 
 % ======================== pags/5-Bibliografia.tex ========================
 \section{Bibliografia}
