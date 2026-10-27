@@ -260,31 +260,31 @@ Conforme orientação do roteiro, as grandezas obtidas a partir de vários harm�
 
 \subsubsection{Velocidade da onda}
 
-O comprimento vibrante da corda foi $L=1{,}0\un{m}$, e a massa suspensa, $m=182{,}77\un{g}$. Para cada harmônico, o comprimento de onda foi calculado pela Equação~\eqref{eq:ln}, $\lambda_n=2L/n$, e a velocidade, pela Equação~\eqref{eq:vlf}, $v_n=\lambda_nf_n$. Por exemplo, para $n=3$,
+O comprimento vibrante da corda foi $L=1{,}71\un{m}$, e a massa suspensa, $m=182{,}77\un{g}$. Para cada harmônico, o comprimento de onda foi calculado pela Equação~\eqref{eq:ln}, $\lambda_n=2L/n$, e a velocidade, pela Equação~\eqref{eq:vlf}, $v_n=\lambda_nf_n$. Por exemplo, para $n=3$,
 \begin{gather*}
-\lambda_3=\frac{2\cdot1{,}0}{3}=0{,}667\un{m},\\
-v_3=0{,}667\cdot550=366{,}7\un{m/s}.
+\lambda_3=\frac{2\cdot1{,}71}{3}=1{,}140\un{m},\\
+v_3=1{,}140\cdot55{,}0=62{,}70\un{m/s}.
 \end{gather*}
 A média das seis velocidades é
 \[
-\bar{v}=\frac{340{,}0+350{,}0+366{,}7+355{,}0+360{,}0+360{,}0}{6}=355{,}28\un{m/s},
+\bar{v}=\frac{58{,}14+59{,}85+62{,}70+60{,}71+61{,}56+61{,}56}{6}=60{,}75\un{m/s},
 \]
 e os desvios $|v_n-\bar{v}|$ correspondentes estão na Tabela~\ref{tab:corda}, que reúne os dados e os resultados.
 
 \begin{table}[H]
 \centering
-\caption{Harmônicos da corda com $L=1{,}0\un{m}$ e $m=182{,}77\un{g}$.}
+\caption{Harmônicos da corda com $L=1{,}71\un{m}$ e $m=182{,}77\un{g}$.}
 \label{tab:corda}
 \begin{tabular}{ccccc}
 \toprule
 $n$ & $\lambda_n$ (m) & $f_n$ (Hz) & $v_n$ (m/s) & $|v_n-\bar{v}|$ (m/s) \\
 \midrule
-1 & 2,000 & 170 & 340,0 & 15,3 \\
-2 & 1,000 & 350 & 350,0 & 5,3 \\
-3 & 0,667 & 550 & 366,7 & 11,4 \\
-4 & 0,500 & 710 & 355,0 & 0,3 \\
-5 & 0,400 & 900 & 360,0 & 4,7 \\
-6 & 0,333 & 1080 & 360,0 & 4,7 \\
+1 & 3,420 & 17,0 & 58,14 & 2,61 \\
+2 & 1,710 & 35,0 & 59,85 & 0,90 \\
+3 & 1,140 & 55,0 & 62,70 & 1,95 \\
+4 & 0,855 & 71,0 & 60,71 & 0,04 \\
+5 & 0,684 & 90,0 & 61,56 & 0,81 \\
+6 & 0,570 & 108,0 & 61,56 & 0,81 \\
 \bottomrule
 \end{tabular}
 \fonte{Elaborada pelos autores.}
@@ -292,13 +292,13 @@ $n$ & $\lambda_n$ (m) & $f_n$ (Hz) & $v_n$ (m/s) & $|v_n-\bar{v}|$ (m/s) \\
 
 O desvio médio é
 \[
-\Delta v=\frac{15{,}28+5{,}28+11{,}39+0{,}28+4{,}72+4{,}72}{6}=6{,}94\un{m/s},
+\Delta v=\frac{2{,}61+0{,}90+1{,}95+0{,}04+0{,}81+0{,}81}{6}=1{,}19\un{m/s},
 \]
 de modo que a velocidade da onda na corda é
 \[
-v=(355\pm7)\un{m/s}.
+v=(60{,}8\pm1{,}2)\un{m/s}.
 \]
-A Figura~\ref{fig:vn} mostra as velocidades obtidas para cada harmônico. Todos os valores diferem da média em no máximo $4{,}3\%$, e não há tendência sistemática com $n$; dentro da dispersão experimental, a velocidade pode ser considerada constante, como previsto, já que ela depende apenas da tensão e da densidade da corda (Equação~\ref{eq:vFmu}), que não foram alteradas. A maior diferença ocorre para $n=1$, harmônico em que a frequência é a menor e o ajuste da máxima amplitude é mais difícil, e para $n=3$. Como as frequências foram anotadas com resolução de $10\un{Hz}$, uma incerteza de leitura de $\pm5\un{Hz}$ corresponde a $\pm3\%$ em $f_1$, comparável à dispersão observada.
+A Figura~\ref{fig:vn} mostra as velocidades obtidas para cada harmônico. Todos os valores diferem da média em no máximo $4{,}3\%$, e não há tendência sistemática com $n$; dentro da dispersão experimental, a velocidade pode ser considerada constante, como previsto, já que ela depende apenas da tensão e da densidade da corda (Equação~\ref{eq:vFmu}), que não foram alteradas. A maior diferença ocorre para $n=1$, harmônico em que a frequência é a menor e o ajuste da máxima amplitude é mais difícil, e para $n=3$. Uma incerteza de $\pm0{,}5\un{Hz}$ na identificação da frequência de máxima amplitude corresponde a $\pm3\%$ em $f_1$, comparável à dispersão observada.
 
 \begin{figure}[H]
 \centering
@@ -308,18 +308,18 @@ A Figura~\ref{fig:vn} mostra as velocidades obtidas para cada harmônico. Todos 
 \begin{axis}[
   width=0.82\textwidth, height=6.5cm,
   xlabel={$n$}, ylabel={$v_n$ (m/s)},
-  xmin=0.5, xmax=6.5, ymin=320, ymax=385,
+  xmin=0.5, xmax=6.5, ymin=55, ymax=66,
   xtick={1,2,3,4,5,6},
   grid=both, legend pos=south east, legend style={font=\footnotesize},
 ]
 \addplot[only marks, mark=*, mark size=2pt] coordinates {
-(1,340) (2,350) (3,366.667) (4,355) (5,360) (6,360)
+(1,58.14) (2,59.85) (3,62.70) (4,60.71) (5,61.56) (6,61.56)
 };
 \addlegendentry{dados}
-\addplot[thick, domain=0.5:6.5] {355.28};
-\addlegendentry{$\bar{v}=355{,}3\un{m/s}$}
-\addplot[dashed, domain=0.5:6.5, forget plot] {355.28+6.94};
-\addplot[dashed, domain=0.5:6.5] {355.28-6.94};
+\addplot[thick, domain=0.5:6.5] {60.75};
+\addlegendentry{$\bar{v}=60{,}75\un{m/s}$}
+\addplot[dashed, domain=0.5:6.5, forget plot] {60.75+1.19};
+\addplot[dashed, domain=0.5:6.5] {60.75-1.19};
 \addlegendentry{$\bar{v}\pm\Delta v$}
 \end{axis}
 \end{tikzpicture}
@@ -334,10 +334,10 @@ F=mg=\left(182{,}77\times10^{-3}\right)(9{,}81)=1{,}7930\un{N}.
 \]
 Com a velocidade medida, a Equação~\eqref{eq:mu} fornece
 \begin{gather*}
-\mu=\frac{F}{\bar{v}^2}=\frac{1{,}7930}{(355{,}28)^2}=1{,}420\times10^{-5}\un{kg/m},\\
-\frac{u(\mu)}{\mu}=\sqrt{\left(\frac{0{,}01}{182{,}77}\right)^2+\left(\frac{2\cdot6{,}94}{355{,}28}\right)^2}=0{,}039,
+\mu=\frac{F}{\bar{v}^2}=\frac{1{,}7930}{(60{,}75)^2}=4{,}858\times10^{-4}\un{kg/m},\\
+\frac{u(\mu)}{\mu}=\sqrt{\left(\frac{0{,}01}{182{,}77}\right)^2+\left(\frac{2\cdot1{,}19}{60{,}75}\right)^2}=0{,}039,
 \end{gather*}
-isto é, $\mu=(1{,}42\pm0{,}06)\times10^{-5}\un{kg/m}=(0{,}0142\pm0{,}0006)\un{g/m}$. A incerteza da massa (resolução da balança, $0{,}01\un{g}$) é desprezível frente à da velocidade.
+isto é, $\mu=(4{,}86\pm0{,}19)\times10^{-4}\un{kg/m}=(0{,}486\pm0{,}019)\un{g/m}$. A incerteza da massa (resolução da balança, $0{,}01\un{g}$) é desprezível frente à da velocidade.
 
 A densidade linear da corda utilizada, obtida pela massa e pelo comprimento da amostra, é
 \begin{gather*}
@@ -346,18 +346,18 @@ A densidade linear da corda utilizada, obtida pela massa e pelo comprimento da a
 \end{gather*}
 ou seja, $\mu_{real}=(0{,}4713\pm0{,}0007)\un{g/m}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$.
 
-O valor obtido a partir da velocidade da onda é menor que o valor nominal da corda. Para interpretar essa diferença, é útil comparar as velocidades. Com $\mu_{real}$ e a tensão aplicada, a Equação~\eqref{eq:vFmu} fornece
+Os dois valores diferem em $0{,}15\times10^{-4}\un{kg/m}$ ($3{,}1\%$), diferença menor que a incerteza de $\mu$ ($0{,}19\times10^{-4}\un{kg/m}$). Portanto, o valor obtido a partir da velocidade da onda é consistente com a corda utilizada. De forma equivalente, com $\mu_{real}$ e a tensão aplicada, a Equação~\eqref{eq:vFmu} prevê
 \begin{gather*}
-v_{nom}=\sqrt{\frac{F}{\mu_{real}}}=\sqrt{\frac{1{,}7930}{4{,}713\times10^{-4}}}=61{,}7\un{m/s},
+v_{prev}=\sqrt{\frac{F}{\mu_{real}}}=\sqrt{\frac{1{,}7930}{4{,}713\times10^{-4}}}=61{,}7\un{m/s},\\
+f_1^{prev}=\frac{v_{prev}}{2L}=\frac{61{,}7}{2\cdot1{,}71}=18{,}0\un{Hz},
 \end{gather*}
-enquanto a velocidade obtida dos harmônicos foi de $355\un{m/s}$. Como $\mu$ depende do inverso do quadrado da velocidade, a diferença entre as velocidades aparece ampliada em $\mu$.
+valores próximos dos obtidos, $\bar{v}=(60{,}8\pm1{,}2)\un{m/s}$ e $f_1=17{,}0\un{Hz}$. As frequências medidas também apresentam a proporção $f_n\approx n\,f_1$ esperada para harmônicos: a regressão linear de $f_n$ em função de $n$ fornece coeficiente angular de $18{,}2\un{Hz}$, próximo de $f_1^{prev}$, e coeficiente linear de $-0{,}9\un{Hz}$, próximo de zero.
 
-As frequências medidas apresentam a proporção $f_n\approx n\,f_1$ esperada para harmônicos (a regressão linear de $f_n$ em função de $n$ fornece coeficiente angular de $181{,}7\un{Hz}$ e coeficiente linear de $-9{,}3\un{Hz}$, próximo de zero), o que confirma a formação das ondas estacionárias e a relação $f_n=n\,v/2L$. A diferença entre os valores de $\mu$ pode ser associada a fatores da montagem que não são contemplados pelo modelo ideal:
+A pequena diferença restante pode ser associada a:
 \begin{enumerate}
-    \item o comprimento que efetivamente vibra é delimitado pelo pino do vibrador e pelo ponto de contato da corda com a roldana, e o valor de $v$ obtido é diretamente proporcional ao comprimento adotado ($v_n=2Lf_n/n$);
-    \item o vibrador excita com mais eficiência alguns modos do que outros, de modo que a identificação do índice $n$ de cada padrão observado depende da contagem visual dos ventres;
-    \item o próprio vibrador (alto-falante) possui ressonâncias mecânicas, que reforçam a amplitude em determinadas faixas de frequência;
-    \item o modelo considera a corda perfeitamente flexível e de extremos rigidamente fixos, enquanto o pino oscila e a roldana apresenta atrito e inércia, o que altera a tensão efetiva ao longo da corda.
+    \item a identificação visual da frequência de máxima amplitude, mais difícil nos harmônicos de baixa frequência, como $n=1$, que apresenta o maior desvio;
+    \item a medida do comprimento vibrante, delimitado pelo pino do vibrador e pelo ponto de contato da corda com a roldana;
+    \item o atrito na roldana e a oscilação do pino, que fazem com que a tensão efetiva e as condições de extremo fixo sejam apenas aproximadamente as do modelo ideal.
 \end{enumerate}
 
 \subsection{Ondas sonoras estacionárias: harmônicos em função da frequência}
@@ -576,7 +576,7 @@ O valor do Experimento 2, $(323\pm3)\un{m/s}$, é menor que o do Experimento 3 e
 
 Os experimentos permitiram observar ondas estacionárias em uma corda com extremos fixos e em uma coluna de ar em um tubo fechado, confirmando que, em ambos os casos, os harmônicos satisfazem a condição $L=n\lambda_n/2$.
 
-Na corda, as frequências dos seis primeiros harmônicos foram aproximadamente múltiplos inteiros da fundamental, e a velocidade da onda foi praticamente constante entre os harmônicos, com $v=(355\pm7)\un{m/s}$. A densidade linear obtida a partir dessa velocidade e da tensão aplicada foi $\mu=(1{,}42\pm0{,}06)\times10^{-5}\un{kg/m}$, menor que o valor nominal da corda, $\mu_{real}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$, diferença associada a características da montagem não contempladas pelo modelo ideal, como o comprimento efetivo de vibração e a resposta do vibrador.
+Na corda, as frequências dos seis primeiros harmônicos foram aproximadamente múltiplos inteiros da fundamental, e a velocidade da onda foi praticamente constante entre os harmônicos, com $v=(60{,}8\pm1{,}2)\un{m/s}$. A densidade linear obtida a partir dessa velocidade e da tensão aplicada foi $\mu=(4{,}86\pm0{,}19)\times10^{-4}\un{kg/m}$, consistente com o valor da corda utilizada, $\mu_{real}=(4{,}713\pm0{,}007)\times10^{-4}\un{kg/m}$, com diferença de $3{,}1\%$, menor que a incerteza.
 
 No tubo com $L=0{,}15\un{m}$, a frequência fundamental medida, $1131\un{Hz}$, coincidiu com a esperada ($1133\un{Hz}$), e o gráfico de $f_n$ em função de $n$ mostrou relação linear, com coeficiente linear compatível com zero. A velocidade do som obtida pelo coeficiente angular, $(323\pm3)\un{m/s}$, ficou $5\%$ abaixo da referência, desvio explicado pela correção de extremidade do tubo. Com frequência fixa de $2002{,}2\un{Hz}$, as diferenças entre comprimentos de ressonância sucessivos foram praticamente constantes, como previsto, e o ajuste linear de $L_n$ em função de $n$ forneceu $\lambda=(17{,}24\pm0{,}03)\un{cm}$, $v=(345{,}2\pm0{,}6)\un{m/s}$ e uma correção de extremidade $\delta=(0{,}75\pm0{,}09)\un{cm}$. Aplicando essa correção ao Experimento 2, obteve-se $v=(339\pm3)\un{m/s}$, o que torna os dois experimentos coerentes entre si e com o valor de referência.
 
