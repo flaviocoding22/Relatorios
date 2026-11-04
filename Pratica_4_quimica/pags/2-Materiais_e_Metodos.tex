@@ -1,0 +1,68 @@
+\section{Materiais e Métodos}
+ \subsection{Materiais}
+ Para a realização do experimento foram utilizados os seguintes materiais:
+ \begin{itemize}
+    \item Calorímetro: copo descartável de poliestireno (PS) dentro de caixa de madeira forrada com PS e com tampa
+    \item Balança analítica
+    \item Termômetro digital
+    \item Cronômetro digital
+    \item Provetas
+    \item Água destilada
+    \item Hidróxido de sódio ($\mathrm{NaOH}$) sólido, em pastilhas
+    \item Solução de ácido clorídrico ($\mathrm{HCl}$) \SI{1}{mol.L^{-1}}
+    \item Solução de hidróxido de sódio ($\mathrm{NaOH}$) \SI{1}{mol.L^{-1}}
+\end{itemize}
+
+ \subsection{Procedimento Experimental}
+ Por envolver solução de base forte, que pode causar danos graves aos olhos, o uso de luvas e óculos de proteção foi obrigatório durante todo o experimento. Em todas as partes, o calorímetro foi lavado com água destilada e seco por dentro e por fora ao final da determinação.
+
+ \subsubsection{Etapas}
+    \textbf{Etapa A -- Entalpia de dissolução do $\mathrm{NaOH}$(s):}
+    O calorímetro vazio foi pesado. Com uma proveta, \SI{100}{mL} de água destilada foram transferidos para o calorímetro, que foi pesado novamente para determinar a massa de água transferida. Com o termômetro suspenso na água e sob agitação, foi lida a temperatura inicial da água, e o conjunto foi pesado outra vez após a agitação. Em seguida, foi pesada uma massa entre \SI{1,5}{g} e \SI{2,0}{g} de $\mathrm{NaOH}$ sólido, anotando-se o valor exato, que foi adicionada ao calorímetro sob agitação suave. Nesta etapa foram registradas apenas a temperatura inicial da água e a temperatura máxima atingida após a dissolução do sólido, sem a série de leituras a cada \SI{20}{s}; ao final, o calorímetro com a solução foi pesado novamente.
+
+    \textbf{Etapa B -- Entalpia da reação $\mathrm{HCl}$(aq) + $\mathrm{NaOH}$(s):}
+    Foi utilizado o mesmo calorímetro da Etapa A, lavado e seco. Com uma proveta, \SI{100}{mL} de solução de $\mathrm{HCl}$ \SI{1}{mol.L^{-1}} foram transferidos para ele. Foi pesada uma massa entre \SI{1,50}{g} e \SI{2,00}{g} de $\mathrm{NaOH}$ sólido, com aproximação de \SI{0,01}{g}. Com o termômetro suspenso no ácido, foram feitas cinco leituras de temperatura a intervalos de \SI{20}{s}; no instante da sexta leitura, o $\mathrm{NaOH}$ sólido foi adicionado e a solução foi agitada suavemente, seguindo-se mais 15 leituras a intervalos de \SI{20}{s}. Ao final, o calorímetro com a solução foi pesado, e a massa da solução ácida foi obtida por diferença.
+
+    \textbf{Etapa C -- Entalpia da reação $\mathrm{HCl}$(aq) + $\mathrm{NaOH}$(aq):}
+    No mesmo calorímetro, lavado e seco, foram transferidos \SI{100}{mL} de $\mathrm{HCl}$ \SI{1}{mol.L^{-1}}, e o conjunto foi pesado para determinar a massa de solução ácida. Em outra proveta limpa e seca, foram medidos \SI{50}{mL} de solução de $\mathrm{NaOH}$ \SI{1}{mol.L^{-1}}. Admitiu-se que as duas soluções estavam à mesma temperatura, por permanecerem no laboratório por várias horas. Com o termômetro suspenso no ácido, foram feitas cinco leituras de temperatura a intervalos de \SI{20}{s}; no instante da sexta leitura, a solução de $\mathrm{NaOH}$ foi adicionada e agitada suavemente, seguindo-se mais 15 leituras a intervalos de \SI{20}{s}. Ao final, o calorímetro com a mistura foi pesado, e a massa de $\mathrm{NaOH}$(aq) adicionada foi obtida por diferença.
+
+ \subsection{Tratamento dos Dados}
+ \subsubsection{Reações envolvidas}
+ As reações estudadas são\textsuperscript{[1],[2]}:
+ \begin{align*}
+    \text{(A)}\quad & \mathrm{NaOH(s)} \longrightarrow \mathrm{Na^{+}(aq)} + \mathrm{OH^{-}(aq)} & \Delta H_A\\
+    \text{(B)}\quad & \mathrm{NaOH(s)} + \mathrm{HCl(aq)} \longrightarrow \mathrm{NaCl(aq)} + \mathrm{H_2O(l)} & \Delta H_B\\
+    \text{(C)}\quad & \mathrm{NaOH(aq)} + \mathrm{HCl(aq)} \longrightarrow \mathrm{NaCl(aq)} + \mathrm{H_2O(l)} & \Delta H_C
+ \end{align*}
+ Somando a dissolução do sólido (A) com a neutralização em solução (C), obtém-se a reação (B). Pela Lei de Hess, portanto, espera-se
+ \[
+    \Delta H_B = \Delta H_A + \Delta H_C .
+ \]
+
+ \subsubsection{Determinação das temperaturas inicial e final}
+ Nas etapas B e C, os instantes das leituras foram contados a partir da primeira leitura ($t = 0$). As cinco leituras anteriores à mistura ocorreram em $t = 0$ a \SI{80}{s}; a mistura ocorreu no instante da sexta leitura, $t_{\text{mist}} = \SI{100}{s}$, e as 15 leituras posteriores, em $t = 120$ a \SI{400}{s}. A temperatura inicial ($T_{\text{inicial}}$) foi tomada como a média das cinco leituras anteriores à mistura. A temperatura final ($T_{\text{final}}$) foi obtida extrapolando-se para $t_{\text{mist}}$ a reta ajustada por regressão linear (mínimos quadrados) às leituras da região de resfriamento, isto é, a partir da temperatura máxima, como na Figura 4.1 da apostila\textsuperscript{[1]}:
+ \[
+    T(t) = a\,t + b
+    \qquad\Rightarrow\qquad
+    T_{\text{final}} = a\,t_{\text{mist}} + b ,
+    \qquad
+    \Delta T = T_{\text{final}} - T_{\text{inicial}} .
+ \]
+ Essa extrapolação corrige, de forma aproximada, a perda de calor para o ambiente durante o tempo de mistura. Na etapa A, como só foram registradas a temperatura inicial e a máxima, tomou-se $\Delta T = T_{\text{máx}} - T_{\text{inicial}}$, sem extrapolação.
+
+ \subsubsection{Cálculo das entalpias}
+ A entalpia de cada reação, para as quantidades usadas, foi calculada por\textsuperscript{[1]}
+ \[
+    \Delta H_{\text{reação}} = -\,m_s\,C_s\,\Delta T ,
+ \]
+ em que $m_s$ é a massa da solução no calorímetro (soma das massas obtidas por pesagem) e $C_s = \SI{3,97}{J.g^{-1}.\degreeCelsius^{-1}}$ é o calor específico da solução, valor fornecido pela apostila. O calor absorvido pelo calorímetro e o perdido para o ambiente foram desprezados, pois as quantidades de solução foram semelhantes em todas as determinações. Para comparar as reações, o resultado foi expresso por mol do reagente limitante, o $\mathrm{NaOH}$:
+ \[
+    \Delta H_{\text{molar}} = \frac{\Delta H_{\text{reação}}}{n_{\mathrm{NaOH}}},
+    \qquad
+    n_{\mathrm{NaOH}} = \frac{m_{\mathrm{NaOH}}}{M_{\mathrm{NaOH}}}
+    \quad (M_{\mathrm{NaOH}} = \SI{40,00}{g.mol^{-1}}).
+ \]
+ Por fim, a validade da Lei de Hess foi avaliada pelo desvio percentual
+ \[
+    \Delta_{\%} = \frac{\Delta H_B - (\Delta H_A + \Delta H_C)}{\Delta H_B}\times 100 .
+ \]

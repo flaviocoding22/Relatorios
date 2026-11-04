@@ -1,0 +1,57 @@
+\PassOptionsToPackage{table, dvipsnames}{xcolor}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+
+\usepackage{mathptmx}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\onehalfspacing
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=3cm,
+    top=3cm,
+    right=2cm,
+    bottom=2cm
+}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\sisetup{
+    output-decimal-marker = {,},
+    per-mode = symbol,
+    separate-uncertainty = true
+}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+]{hyperref}
+
+\graphicspath{{./pags/imagens/}}
+
+% ------------------------------------------------------------
+% MARCADOR DE DADOS A PREENCHER (aparece em vermelho no PDF)
+% Funciona em texto e em modo matemático. Ex.: \ph{V_1}, \ph{\square}
+% Quando tiver os dados, troque \ph{...} pelo valor numérico.
+% Para achar tudo que falta, busque por "\ph" no editor.
+% Para entregar sem vermelho, troque a definição por:
+%   \newcommand{\ph}[1]{\ensuremath{#1}}
+% ------------------------------------------------------------
+\newcommand{\ph}[1]{\textcolor{red}{\ensuremath{#1}}} % marcador de dados a preencher (não usado na versão final)
